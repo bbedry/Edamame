@@ -15,6 +15,13 @@
 		910886D42B5DAE5E006B1BF1 /* EdamameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886D32B5DAE5E006B1BF1 /* EdamameTests.swift */; };
 		910886DE2B5DAE5E006B1BF1 /* EdamameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886DD2B5DAE5E006B1BF1 /* EdamameUITests.swift */; };
 		910886E02B5DAE5E006B1BF1 /* EdamameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886DF2B5DAE5E006B1BF1 /* EdamameUITestsLaunchTests.swift */; };
+		910886EF2B5DCB12006B1BF1 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886EE2B5DCB12006B1BF1 /* RootRouter.swift */; };
+		910886F12B5DCB1B006B1BF1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886F02B5DCB1B006B1BF1 /* Router.swift */; };
+		910886F82B5DCBFE006B1BF1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886F72B5DCBFE006B1BF1 /* LoginPresenter.swift */; };
+		910886FA2B5DCC08006B1BF1 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886F92B5DCC08006B1BF1 /* LoginInteractor.swift */; };
+		910886FC2B5DCC17006B1BF1 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886FB2B5DCC17006B1BF1 /* LoginRouter.swift */; };
+		910886FE2B5DCC26006B1BF1 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */; };
+		910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		910886D92B5DAE5E006B1BF1 /* EdamameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdamameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		910886DD2B5DAE5E006B1BF1 /* EdamameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamameUITests.swift; sourceTree = "<group>"; };
 		910886DF2B5DAE5E006B1BF1 /* EdamameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		910886EE2B5DCB12006B1BF1 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		910886F02B5DCB1B006B1BF1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		910886F72B5DCBFE006B1BF1 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		910886F92B5DCC08006B1BF1 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		910886FB2B5DCC17006B1BF1 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +111,8 @@
 		910886BB2B5DAE5D006B1BF1 /* Edamame */ = {
 			isa = PBXGroup;
 			children = (
-				910886BC2B5DAE5D006B1BF1 /* AppDelegate.swift */,
+				910886EC2B5DCADF006B1BF1 /* App */,
+				910886ED2B5DCAEE006B1BF1 /* Base */,
 				910886BE2B5DAE5D006B1BF1 /* SceneDelegate.swift */,
 				910886C22B5DAE5D006B1BF1 /* Main.storyboard */,
 				910886C52B5DAE5E006B1BF1 /* Assets.xcassets */,
@@ -122,6 +137,52 @@
 				910886DF2B5DAE5E006B1BF1 /* EdamameUITestsLaunchTests.swift */,
 			);
 			path = EdamameUITests;
+			sourceTree = "<group>";
+		};
+		910886EC2B5DCADF006B1BF1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				910886BC2B5DAE5D006B1BF1 /* AppDelegate.swift */,
+				910886EE2B5DCB12006B1BF1 /* RootRouter.swift */,
+				910886F02B5DCB1B006B1BF1 /* Router.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		910886ED2B5DCAEE006B1BF1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				910886F22B5DCB8E006B1BF1 /* Modules */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		910886F22B5DCB8E006B1BF1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				910886F32B5DCBAA006B1BF1 /* Screens */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		910886F32B5DCBAA006B1BF1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				910886F42B5DCBB6006B1BF1 /* Login */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		910886F42B5DCBB6006B1BF1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				910886F72B5DCBFE006B1BF1 /* LoginPresenter.swift */,
+				910886F92B5DCC08006B1BF1 /* LoginInteractor.swift */,
+				910886FB2B5DCC17006B1BF1 /* LoginRouter.swift */,
+				910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */,
+				910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				910886C92B5DAE5E006B1BF1 /* LaunchScreen.storyboard in Resources */,
+				910886FE2B5DCC26006B1BF1 /* LoginViewController.storyboard in Resources */,
 				910886C62B5DAE5E006B1BF1 /* Assets.xcassets in Resources */,
 				910886C42B5DAE5D006B1BF1 /* Main.storyboard in Resources */,
 			);
@@ -255,7 +317,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910886F82B5DCBFE006B1BF1 /* LoginPresenter.swift in Sources */,
+				910886F12B5DCB1B006B1BF1 /* Router.swift in Sources */,
+				910886FA2B5DCC08006B1BF1 /* LoginInteractor.swift in Sources */,
 				910886BD2B5DAE5D006B1BF1 /* AppDelegate.swift in Sources */,
+				910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */,
+				910886EF2B5DCB12006B1BF1 /* RootRouter.swift in Sources */,
+				910886FC2B5DCC17006B1BF1 /* LoginRouter.swift in Sources */,
 				910886BF2B5DAE5D006B1BF1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
