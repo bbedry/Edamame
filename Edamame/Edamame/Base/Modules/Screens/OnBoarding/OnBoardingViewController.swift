@@ -25,10 +25,13 @@ final class OnBoardingViewController: UIViewController, OnBoardingProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let handler = handler else {
-            print("handler not set")
-            return
-        }
+       setupUI()
+        
+        
+    }
+    
+    private func setupUI() {
+        presentLoginButton.addCornerRadius(radius: 25)
     }
     
     @IBAction func presentLoginButton(_ sender: UIButton) {
