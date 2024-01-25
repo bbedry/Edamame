@@ -21,6 +21,7 @@
 		910886FC2B5DCC17006B1BF1 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886FB2B5DCC17006B1BF1 /* LoginRouter.swift */; };
 		910886FE2B5DCC26006B1BF1 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */; };
 		910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */; };
+		9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7402B62F56B00E4EE78 /* AppColors.swift */; };
 		9192A0552B5FAD99007BF6A4 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192A0542B5FAD99007BF6A4 /* OnBoardingViewController.swift */; };
 		9192A0572B5FADB4007BF6A4 /* OnBoardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192A0562B5FADB4007BF6A4 /* OnBoardingPresenter.swift */; };
 		9192A05B2B5FADE7007BF6A4 /* OnBoardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192A05A2B5FADE7007BF6A4 /* OnBoardingRouter.swift */; };
@@ -74,6 +75,7 @@
 		910886FB2B5DCC17006B1BF1 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9189E7402B62F56B00E4EE78 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		9192A0542B5FAD99007BF6A4 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		9192A0562B5FADB4007BF6A4 /* OnBoardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPresenter.swift; sourceTree = "<group>"; };
 		9192A05A2B5FADE7007BF6A4 /* OnBoardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingRouter.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		910886ED2B5DCAEE006B1BF1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				9189E73F2B62F55000E4EE78 /* Utilies */,
 				910886F22B5DCB8E006B1BF1 /* Modules */,
 				91FF02B02B61E4E700EC438C /* Extensions */,
 				91FF029C2B61CF7400EC438C /* Resources */,
@@ -213,6 +216,14 @@
 				910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		9189E73F2B62F55000E4EE78 /* Utilies */ = {
+			isa = PBXGroup;
+			children = (
+				9189E7402B62F56B00E4EE78 /* AppColors.swift */,
+			);
+			path = Utilies;
 			sourceTree = "<group>";
 		};
 		9192A0532B5FAD6E007BF6A4 /* OnBoarding */ = {
@@ -404,6 +415,7 @@
 				910886F82B5DCBFE006B1BF1 /* LoginPresenter.swift in Sources */,
 				910886F12B5DCB1B006B1BF1 /* Router.swift in Sources */,
 				91FF02B22B61E51700EC438C /* UIViewExtension.swift in Sources */,
+				9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */,
 				910886FA2B5DCC08006B1BF1 /* LoginInteractor.swift in Sources */,
 				910886BD2B5DAE5D006B1BF1 /* AppDelegate.swift in Sources */,
 				910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */,
