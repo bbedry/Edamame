@@ -23,7 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        openOnBoardingPage()
+        
         return true
+    }
+    
+    func openOnBoardingPage() {
+        let rootRouter = RootRouter(screenType: .onBoarding)
+        router = rootRouter
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = rootRouter.rootVC
+        window?.makeKeyAndVisible()
     }
 
 }

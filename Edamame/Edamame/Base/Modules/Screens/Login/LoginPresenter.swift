@@ -22,15 +22,15 @@ class LoginPresenter: LoginPresenterProtocol {
    
     
     func performLogin(_ email: String?, pass: String?) {
-        <#code#>
+        print(email)
     }
     
     func validateEmail(_ email: String) throws {
-        <#code#>
+        print(email)
     }
     
     func validatePassword(_ password: String) throws {
-        <#code#>
+        print(password)
     }
     
     

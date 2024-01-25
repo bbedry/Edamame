@@ -17,20 +17,18 @@ protocol LoginInteractorProtocol {
 
 class LoginInteractor {
  
-    
-    
 }
 
 extension LoginInteractor: LoginInteractorProtocol {
     func validateEmail(_ email: String?) throws {
-        <#code#>
+        print(email)
     }
     
     func validatePassword(_ password: String?) throws {
-        <#code#>
+        print(password)
     }
     
     func login(email: String?, password: String?) {
-        <#code#>
+        print(email, password)
     }
 }

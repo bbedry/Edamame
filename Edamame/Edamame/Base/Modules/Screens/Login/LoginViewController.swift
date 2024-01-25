@@ -33,10 +33,10 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     
 
     func showEmailError(_ error: String) {
-        <#code#>
+        print(error)
     }
     
     func showPasswordError(_ error: String) {
-        <#code#>
+        print(error)
     }
 }
