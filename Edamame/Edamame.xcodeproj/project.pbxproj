@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4A96AE810B152D8D5BC0D8 /* Pods_Edamame_EdamameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D8446B1FCED122843BC3339 /* Pods_Edamame_EdamameUITests.framework */; };
+		571D3D4F86FCC06CC3F4674B /* Pods_EdamameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65811395B1C34A65D9FAA6C2 /* Pods_EdamameTests.framework */; };
 		910886BD2B5DAE5D006B1BF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886BC2B5DAE5D006B1BF1 /* AppDelegate.swift */; };
 		910886C42B5DAE5D006B1BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910886C22B5DAE5D006B1BF1 /* Main.storyboard */; };
 		910886C62B5DAE5E006B1BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910886C52B5DAE5E006B1BF1 /* Assets.xcassets */; };
@@ -22,6 +24,7 @@
 		910886FE2B5DCC26006B1BF1 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */; };
 		910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */; };
 		91439F882B64108E0043B855 /* ConsValidataion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91439F872B64108E0043B855 /* ConsValidataion.swift */; };
+		91439F8A2B6472080043B855 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91439F892B6472080043B855 /* GoogleService-Info.plist */; };
 		9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7402B62F56B00E4EE78 /* AppColors.swift */; };
 		9189E7442B63022F00E4EE78 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7432B63022F00E4EE78 /* SignUpViewController.swift */; };
 		9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7452B63026200E4EE78 /* SignUpPresenter.swift */; };
@@ -46,6 +49,7 @@
 		91FF02AF2B61CF9A00EC438C /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91FF02A62B61CF9A00EC438C /* Inter-Bold.ttf */; };
 		91FF02B22B61E51700EC438C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF02B12B61E51700EC438C /* UIViewExtension.swift */; };
 		91FF02B42B61E54600EC438C /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FF02B32B61E54600EC438C /* CodableExtension.swift */; };
+		DB4A08C898A8E3A636EED417 /* Pods_Edamame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B82173B3CFF960DF6EEB944 /* Pods_Edamame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042BCB5CB35932D8081CAD89 /* Pods-EdamameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdamameTests.debug.xcconfig"; path = "Target Support Files/Pods-EdamameTests/Pods-EdamameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D8446B1FCED122843BC3339 /* Pods_Edamame_EdamameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edamame_EdamameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BDF4ACB7C791714087C53D5 /* Pods-Edamame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edamame.release.xcconfig"; path = "Target Support Files/Pods-Edamame/Pods-Edamame.release.xcconfig"; sourceTree = "<group>"; };
+		5C360693D932BF561B4D8D4C /* Pods-Edamame-EdamameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edamame-EdamameUITests.debug.xcconfig"; path = "Target Support Files/Pods-Edamame-EdamameUITests/Pods-Edamame-EdamameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		65811395B1C34A65D9FAA6C2 /* Pods_EdamameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EdamameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87B66403A2BA3D04FB1EF680 /* Pods-Edamame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edamame.debug.xcconfig"; path = "Target Support Files/Pods-Edamame/Pods-Edamame.debug.xcconfig"; sourceTree = "<group>"; };
+		8B82173B3CFF960DF6EEB944 /* Pods_Edamame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edamame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		910886B92B5DAE5D006B1BF1 /* Edamame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edamame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		910886BC2B5DAE5D006B1BF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		910886C32B5DAE5D006B1BF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 		910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		91439F872B64108E0043B855 /* ConsValidataion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsValidataion.swift; sourceTree = "<group>"; };
+		91439F892B6472080043B855 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9189E7402B62F56B00E4EE78 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		9189E7432B63022F00E4EE78 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9189E7452B63026200E4EE78 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
@@ -109,6 +121,8 @@
 		91FF02A62B61CF9A00EC438C /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		91FF02B12B61E51700EC438C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		91FF02B32B61E54600EC438C /* CodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtension.swift; sourceTree = "<group>"; };
+		B58C2F7A2E56F94628DADE2E /* Pods-Edamame-EdamameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edamame-EdamameUITests.release.xcconfig"; path = "Target Support Files/Pods-Edamame-EdamameUITests/Pods-Edamame-EdamameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FCD6D5E3FE8C2CE8B14F4520 /* Pods-EdamameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EdamameTests.release.xcconfig"; path = "Target Support Files/Pods-EdamameTests/Pods-EdamameTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4A08C898A8E3A636EED417 /* Pods_Edamame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				571D3D4F86FCC06CC3F4674B /* Pods_EdamameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,12 +146,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D4A96AE810B152D8D5BC0D8 /* Pods_Edamame_EdamameUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4525F3209BC085FAC9473E4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87B66403A2BA3D04FB1EF680 /* Pods-Edamame.debug.xcconfig */,
+				3BDF4ACB7C791714087C53D5 /* Pods-Edamame.release.xcconfig */,
+				5C360693D932BF561B4D8D4C /* Pods-Edamame-EdamameUITests.debug.xcconfig */,
+				B58C2F7A2E56F94628DADE2E /* Pods-Edamame-EdamameUITests.release.xcconfig */,
+				042BCB5CB35932D8081CAD89 /* Pods-EdamameTests.debug.xcconfig */,
+				FCD6D5E3FE8C2CE8B14F4520 /* Pods-EdamameTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		75E6C0009C7BC4B5541E74DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B82173B3CFF960DF6EEB944 /* Pods_Edamame.framework */,
+				2D8446B1FCED122843BC3339 /* Pods_Edamame_EdamameUITests.framework */,
+				65811395B1C34A65D9FAA6C2 /* Pods_EdamameTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		910886B02B5DAE5D006B1BF1 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +183,8 @@
 				910886D22B5DAE5E006B1BF1 /* EdamameTests */,
 				910886DC2B5DAE5E006B1BF1 /* EdamameUITests */,
 				910886BA2B5DAE5D006B1BF1 /* Products */,
+				4525F3209BC085FAC9473E4E /* Pods */,
+				75E6C0009C7BC4B5541E74DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +207,7 @@
 				910886C52B5DAE5E006B1BF1 /* Assets.xcassets */,
 				910886C72B5DAE5E006B1BF1 /* LaunchScreen.storyboard */,
 				910886CA2B5DAE5E006B1BF1 /* Info.plist */,
+				91439F892B6472080043B855 /* GoogleService-Info.plist */,
 			);
 			path = Edamame;
 			sourceTree = "<group>";
@@ -312,9 +355,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 910886E32B5DAE5E006B1BF1 /* Build configuration list for PBXNativeTarget "Edamame" */;
 			buildPhases = (
+				A30902B6B05C161AEC22B1F5 /* [CP] Check Pods Manifest.lock */,
 				910886B52B5DAE5D006B1BF1 /* Sources */,
 				910886B62B5DAE5D006B1BF1 /* Frameworks */,
 				910886B72B5DAE5D006B1BF1 /* Resources */,
+				78FAD59349C11A756BF53AE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,6 +374,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 910886E62B5DAE5E006B1BF1 /* Build configuration list for PBXNativeTarget "EdamameTests" */;
 			buildPhases = (
+				64A3DB4287B49DE1A395C4AA /* [CP] Check Pods Manifest.lock */,
 				910886CB2B5DAE5E006B1BF1 /* Sources */,
 				910886CC2B5DAE5E006B1BF1 /* Frameworks */,
 				910886CD2B5DAE5E006B1BF1 /* Resources */,
@@ -347,9 +393,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 910886E92B5DAE5E006B1BF1 /* Build configuration list for PBXNativeTarget "EdamameUITests" */;
 			buildPhases = (
+				538AF44495F0A204B9A392E8 /* [CP] Check Pods Manifest.lock */,
 				910886D52B5DAE5E006B1BF1 /* Sources */,
 				910886D62B5DAE5E006B1BF1 /* Frameworks */,
 				910886D72B5DAE5E006B1BF1 /* Resources */,
+				37072363994E5CB5E4E3D079 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,6 +466,7 @@
 				910886FE2B5DCC26006B1BF1 /* LoginViewController.storyboard in Resources */,
 				91FF02AB2B61CF9A00EC438C /* Inter-Black.ttf in Resources */,
 				91FF02AE2B61CF9A00EC438C /* Inter-Regular.ttf in Resources */,
+				91439F8A2B6472080043B855 /* GoogleService-Info.plist in Resources */,
 				91FF02AC2B61CF9A00EC438C /* Inter-Light.ttf in Resources */,
 				91FF02AF2B61CF9A00EC438C /* Inter-Bold.ttf in Resources */,
 				9189E74A2B6302C400E4EE78 /* SignUpViewController.storyboard in Resources */,
@@ -442,6 +491,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37072363994E5CB5E4E3D079 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Edamame-EdamameUITests/Pods-Edamame-EdamameUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Edamame-EdamameUITests/Pods-Edamame-EdamameUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Edamame-EdamameUITests/Pods-Edamame-EdamameUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		538AF44495F0A204B9A392E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Edamame-EdamameUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64A3DB4287B49DE1A395C4AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EdamameTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78FAD59349C11A756BF53AE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Edamame/Pods-Edamame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Edamame/Pods-Edamame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Edamame/Pods-Edamame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A30902B6B05C161AEC22B1F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Edamame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		910886B52B5DAE5D006B1BF1 /* Sources */ = {
@@ -640,6 +792,7 @@
 		};
 		910886E42B5DAE5E006B1BF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B66403A2BA3D04FB1EF680 /* Pods-Edamame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -672,6 +825,7 @@
 		};
 		910886E52B5DAE5E006B1BF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BDF4ACB7C791714087C53D5 /* Pods-Edamame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -704,6 +858,7 @@
 		};
 		910886E72B5DAE5E006B1BF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042BCB5CB35932D8081CAD89 /* Pods-EdamameTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -724,6 +879,7 @@
 		};
 		910886E82B5DAE5E006B1BF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCD6D5E3FE8C2CE8B14F4520 /* Pods-EdamameTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -744,6 +900,7 @@
 		};
 		910886EA2B5DAE5E006B1BF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C360693D932BF561B4D8D4C /* Pods-Edamame-EdamameUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -762,6 +919,7 @@
 		};
 		910886EB2B5DAE5E006B1BF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B58C2F7A2E56F94628DADE2E /* Pods-Edamame-EdamameUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

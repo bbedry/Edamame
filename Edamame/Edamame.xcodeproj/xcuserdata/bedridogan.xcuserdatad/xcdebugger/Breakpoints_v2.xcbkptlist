@@ -7,63 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "55C9D057-9728-4B93-9F36-06FDDAAF113C"
+            uuid = "2F884DBD-E3CA-4085-9E00-90A8875B411B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpPresenter.swift"
+            filePath = "Edamame/App/Router.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "validateEmailAddress(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "90A0CAFE-76EB-41F1-9121-52CBDB6713F5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "validateEmail(_:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "showError(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "90A0CAFE-76EB-41F1-9121-52CBDB6713F5 - 1655b71676132cb7"
+                  uuid = "2F884DBD-E3CA-4085-9E00-90A8875B411B - f1ddc59e94ceb07d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validateEmail(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
+                  symbolName = "Edamame.Router.showError(Swift.Error) -&gt; ()"
                   moduleName = "Edamame"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
+                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/App/Router.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "360">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
-                  uuid = "90A0CAFE-76EB-41F1-9121-52CBDB6713F5 - 1655b71676132cb7"
+                  uuid = "2F884DBD-E3CA-4085-9E00-90A8875B411B - 91e4967942fd090f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validateEmail(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
+                  symbolName = "Edamame.Router.showError(Swift.String) -&gt; ()"
                   moduleName = "Edamame"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
+                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/App/Router.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "356">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "124">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -71,458 +55,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5A613D27-429B-42D0-8FB5-39AE161A57E6"
+            uuid = "53680105-BE45-4614-B538-B6CAD7F46A90"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
+            filePath = "Edamame/App/Router.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "validateEmail(_:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "showError(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5A613D27-429B-42D0-8FB5-39AE161A57E6 - 1655b71676132d33"
+                  uuid = "53680105-BE45-4614-B538-B6CAD7F46A90 - f1ddc59e94ceb098"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validateEmail(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
+                  symbolName = "Edamame.Router.showError(Swift.Error) -&gt; ()"
                   moduleName = "Edamame"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
+                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/App/Router.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "220">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "452">
                </Location>
                <Location
-                  uuid = "5A613D27-429B-42D0-8FB5-39AE161A57E6 - 1655b71676132d33"
+                  uuid = "53680105-BE45-4614-B538-B6CAD7F46A90 - 91e4967942fd09ea"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validateEmail(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
+                  symbolName = "Edamame.Router.showError(Swift.String) -&gt; ()"
                   moduleName = "Edamame"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
+                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/App/Router.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "216">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "332">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "75EAB41D-4AF0-4317-A089-436B1F9BF500"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "validateEmail(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "75EAB41D-4AF0-4317-A089-436B1F9BF500 - 1655b71676132dbf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validateEmail(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "472">
-               </Location>
-               <Location
-                  uuid = "75EAB41D-4AF0-4317-A089-436B1F9BF500 - 1655b71676132dbf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validateEmail(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "512">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B57099F9-EA9D-4734-8109-49AF1ECDE652"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "validateEmailAddress(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A9718C98-CCF7-42E5-BB0E-BD0687D78AA9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "validatePassword(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A9718C98-CCF7-42E5-BB0E-BD0687D78AA9 - 3bbc4926449448f2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "388">
-               </Location>
-               <Location
-                  uuid = "A9718C98-CCF7-42E5-BB0E-BD0687D78AA9 - 3bbc4926449448f2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "288">
-               </Location>
-               <Location
-                  uuid = "A9718C98-CCF7-42E5-BB0E-BD0687D78AA9 - 3bbc4926449448f2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "420">
-               </Location>
-               <Location
-                  uuid = "A9718C98-CCF7-42E5-BB0E-BD0687D78AA9 - 3bbc492644944955"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "516">
-               </Location>
-               <Location
-                  uuid = "A9718C98-CCF7-42E5-BB0E-BD0687D78AA9 - 3bbc492644944934"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "420">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3C9965EB-B8AF-46E6-ADE1-1D7DD7026643"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "showValidateError(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3C9965EB-B8AF-46E6-ADE1-1D7DD7026643 - 115236aa84a04607"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpPresenter.showValidateError(Swift.Error) -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "552">
-               </Location>
-               <Location
-                  uuid = "3C9965EB-B8AF-46E6-ADE1-1D7DD7026643 - 115236aa84a04607"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpPresenter.showValidateError(Swift.Error) -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "548">
-               </Location>
-               <Location
-                  uuid = "3C9965EB-B8AF-46E6-ADE1-1D7DD7026643 - 115236aa84a04607"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpPresenter.showValidateError(Swift.Error) -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "596">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4D328408-79D4-472D-AF56-FC00422A0ED4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "showPasswordError(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CB77D137-7AD2-4E0D-BB6D-26B1452D05E2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "validatePassword(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CB77D137-7AD2-4E0D-BB6D-26B1452D05E2 - 3bbc49264494481b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "560">
-               </Location>
-               <Location
-                  uuid = "CB77D137-7AD2-4E0D-BB6D-26B1452D05E2 - 3bbc49264494481b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "456">
-               </Location>
-               <Location
-                  uuid = "CB77D137-7AD2-4E0D-BB6D-26B1452D05E2 - 3bbc49264494481b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "604">
-               </Location>
-               <Location
-                  uuid = "CB77D137-7AD2-4E0D-BB6D-26B1452D05E2 - 3bbc49264494487e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  uuid = "CB77D137-7AD2-4E0D-BB6D-26B1452D05E2 - 3bbc49264494485d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Edamame.SignUpInteractor.validatePassword(Swift.Optional&lt;Swift.String&gt;) throws -&gt; ()"
-                  moduleName = "Edamame"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bedridogan/Desktop/Edamame/Edamame/Edamame/Base/Modules/Screens/SignUp/SignUpInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "604">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5B17271C-5119-43A8-AF23-5684B50AECE2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "showPasswordError(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2DAA0928-E323-439F-91FA-60327FE55FFF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "validatePassword(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E8BD22D5-8B53-444C-BB4C-BCF28932A576"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "showPasswordError(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "248DC9A3-AE4D-473D-AF11-7ECC2B527A13"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "showValidateError(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3292E8F1-4944-44C5-8CC1-B91BB96BDAC6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edamame/Base/Modules/Screens/SignUp/SignUpViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "textFieldValueChanged(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

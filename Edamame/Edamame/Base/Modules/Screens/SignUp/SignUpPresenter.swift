@@ -27,8 +27,8 @@ final class SignUpPresenter: SignUpPresenterProtocol {
             view?.showEmailError(error.localizedDescription)
         } else if let error = error as? PasswordError {
             view?.showPasswordError(error.localizedDescription)
-        } else {
-//            router?.showError(error)
+        } else if let error = error as? ValidationError {
+            router?.showError(error.localizedDescription)
         }
     }
     
@@ -50,6 +50,15 @@ extension SignUpPresenter {
           try interactor?.validatePassword(pass)
         } catch (let error) {
 //            view?.isValidatePassword(error)
+            showValidateError(error)
+            return
+        }
+    }
+    
+    func performSignUp(_ email: String?, _ pass: String?) throws {
+        do {
+            try interactor?.performSignUp(email, pass: pass)
+        } catch (let error) {
             showValidateError(error)
             return
         }

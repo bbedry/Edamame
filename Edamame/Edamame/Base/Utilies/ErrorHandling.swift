@@ -10,6 +10,16 @@ import Foundation
 
 
 // MARK: - Error definitions and reason
+enum ValidationError: Error {
+    case empty(reason: ValidationErrorReason)
+    
+    var localizedDescription: String {
+        switch self {
+        case .empty(let reason):
+            return reason.rawValue
+        }
+    }
+}
 
 enum EmailError: Error {
     case empty
@@ -50,4 +60,8 @@ enum PasswordError: Error {
 enum EmailErrorReason: String {
     case format = "E-mail must be a valid email address"
     case suffix = "E-mail must has suffix @gmail.com"
+}
+
+enum ValidationErrorReason: String {
+    case fillInformation = "You must fill up email and password please!"
 }

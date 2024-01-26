@@ -10,6 +10,7 @@ import UIKit
 protocol SignUpControllerProtocolHandler {
     func validateEmailAddress(_ email: String?) throws
     func validatePassword(_ pass: String) throws
+    func performSignUp(_ email: String?, _ pass: String?) throws
 }
 
 protocol SignUpControllerProtocol: AnyObject {
@@ -87,7 +88,10 @@ final class SignUpViewController: UIViewController, SignUpControllerProtocol {
         }
     }
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        let email = emailTextField.text
+        let pass = passwordTextField.text
         
+        try? handler?.performSignUp(email, pass)
     }
     
     @IBAction func textFieldValueChanged(_ sender: UITextField) {
