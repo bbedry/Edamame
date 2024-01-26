@@ -24,6 +24,8 @@ final class SignUpInteractor: SignUpInteractorProtocol {
         
         if !email.hasSuffix("@gmail.com") {
             throw EmailError.invalid(reason: .suffix)
+        } else {
+            throw EmailError.approved
         }
     }
     

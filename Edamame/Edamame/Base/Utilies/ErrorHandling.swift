@@ -14,13 +14,16 @@ import Foundation
 enum EmailError: Error {
     case empty
     case invalid(reason: EmailErrorReason)
+    case approved
 
     var localizedDescription: String {
         switch self {
         case .empty:
-            return "Username is required"
+            return "Email is required"
         case .invalid(let reason):
             return reason.rawValue
+        case .approved:
+            return "Approved Email"
         }
     }
 }
@@ -39,15 +42,9 @@ enum PasswordError: Error {
             return "Approved Password"
         case .invalid(let reason):
             print("reason: \(reason)")
-            
             return reason
         }
     }
-}
-
-enum PasswordErrorReason: String {
-    case length = "validation_min"
-    case format = "validation_digit"
 }
 
 enum EmailErrorReason: String {

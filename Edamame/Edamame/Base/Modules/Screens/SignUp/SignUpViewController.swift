@@ -44,24 +44,31 @@ final class SignUpViewController: UIViewController, SignUpControllerProtocol {
     
     
     func showEmailError(_ error: String) {
-        
+        print(error)
+        emailContainerView.addBorderView(width: 0.5, color: AppColors.secondryColor)
+        if error == "Email is required" {
+            emailContainerView.addBorderView(width: 0.5, color: AppColors.outlineColor)
+        } else if error == "Approved Email" {
+            emailContainerView.addBorderView(width: 0.5, color: AppColors.primaryColor)
+        }
     }
     
     func showPasswordError(_ error: String) {
+        passwordContainerView.addBorderView(width: 0.5, color: AppColors.secondryColor)
         if error == "validation_digit" {
             self.checkCharactersCountImage.image = UIImage(named: "approvedPassword")
             self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
+            
         } else if error == "validation_min" {
             self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
             self.checkCharactersCountImage.image = UIImage(named: "unApprovedPassword")
         } else if error == "Password is required" {
             self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
             self.checkCharactersCountImage.image = UIImage(named: "unApprovedPassword")
-            passwordContainerView.addBorderView(width: 0.5, color: AppColors.secondryColor)
+            passwordContainerView.addBorderView(width: 0.5, color: AppColors.outlineColor)
         } else if error == "validation_digit,validation_min"{
             self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
             self.checkCharactersCountImage.image = UIImage(named: "unApprovedPassword")
-            passwordContainerView.addBorderView(width: 0.5, color: AppColors.primaryColor)
         } else {
             self.checkContainsNumberImage.image = UIImage(named: "approvedPassword")
             self.checkCharactersCountImage.image = UIImage(named: "approvedPassword")
