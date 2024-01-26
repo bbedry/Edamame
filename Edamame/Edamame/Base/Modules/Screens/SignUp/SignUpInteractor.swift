@@ -32,13 +32,16 @@ final class SignUpInteractor: SignUpInteractorProtocol {
             throw PasswordError.empty
         }
         
-        if password.count < 6 || password.count > 20 {
-            throw PasswordError.invalid(reason: .length)
+        if !password.validateRegex(.password)  {
+            
+            let validateMessage = ConsValidation().getMissingValidation(str: password).joined(separator: ",")
+            
+            throw PasswordError.invalid(validateMessage)
+            
+        } else {
+            throw PasswordError.approved
         }
         
-        if !password.validateRegex(.password) {
-            throw PasswordError.invalid(reason: .format)
-        }
     }
     
     

@@ -72,7 +72,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                                 <connections>
-                                                                    <action selector="textFieldEditingChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="V9I-OL-fO6"/>
+                                                                    <action selector="textFieldValueChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="ZEA-kP-VjT"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
@@ -112,7 +112,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" textContentType="password"/>
                                                                         <connections>
-                                                                            <action selector="textFieldEditingChanged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="uFx-F2-QKH"/>
+                                                                            <action selector="textFieldValueChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="vRO-Rg-3yI"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>

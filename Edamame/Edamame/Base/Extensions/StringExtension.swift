@@ -18,4 +18,5 @@ extension String {
         let pre = NSPredicate(format: "SELF MATCHES %@", regex.rawValue)
         return pre.evaluate(with: self)
     }
+    
 }

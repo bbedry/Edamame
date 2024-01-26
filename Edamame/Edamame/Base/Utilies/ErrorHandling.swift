@@ -27,21 +27,27 @@ enum EmailError: Error {
 
 enum PasswordError: Error {
     case empty
-    case invalid(reason: PasswordErrorReason)
+    case invalid(String)
+    case approved
+    
 
     var localizedDescription: String {
         switch self {
         case .empty:
             return "Password is required"
+        case .approved:
+            return "Approved Password"
         case .invalid(let reason):
-            return reason.rawValue
+            print("reason: \(reason)")
+            
+            return reason
         }
     }
 }
 
 enum PasswordErrorReason: String {
-    case length = "Password's length must be greater than 6 and less than 21"
-    case format = "A password can only contain alphanumeric characters with underscores, hyphens, periods, at sign"
+    case length = "validation_min"
+    case format = "validation_digit"
 }
 
 enum EmailErrorReason: String {

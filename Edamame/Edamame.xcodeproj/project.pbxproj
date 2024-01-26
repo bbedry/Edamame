@@ -21,6 +21,7 @@
 		910886FC2B5DCC17006B1BF1 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886FB2B5DCC17006B1BF1 /* LoginRouter.swift */; };
 		910886FE2B5DCC26006B1BF1 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */; };
 		910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */; };
+		91439F882B64108E0043B855 /* ConsValidataion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91439F872B64108E0043B855 /* ConsValidataion.swift */; };
 		9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7402B62F56B00E4EE78 /* AppColors.swift */; };
 		9189E7442B63022F00E4EE78 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7432B63022F00E4EE78 /* SignUpViewController.swift */; };
 		9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7452B63026200E4EE78 /* SignUpPresenter.swift */; };
@@ -83,6 +84,7 @@
 		910886FB2B5DCC17006B1BF1 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		91439F872B64108E0043B855 /* ConsValidataion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsValidataion.swift; sourceTree = "<group>"; };
 		9189E7402B62F56B00E4EE78 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		9189E7432B63022F00E4EE78 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9189E7452B63026200E4EE78 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				91FF02B32B61E54600EC438C /* CodableExtension.swift */,
 				9189E74F2B6329E000E4EE78 /* StringExtension.swift */,
 				9189E7512B6329EC00E4EE78 /* Regex.swift */,
+				91439F872B64108E0043B855 /* ConsValidataion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				9189E7522B6329EC00E4EE78 /* Regex.swift in Sources */,
 				910886F12B5DCB1B006B1BF1 /* Router.swift in Sources */,
 				91FF02B22B61E51700EC438C /* UIViewExtension.swift in Sources */,
+				91439F882B64108E0043B855 /* ConsValidataion.swift in Sources */,
 				9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */,
 				9189E7482B63027700E4EE78 /* SignUpRouter.swift in Sources */,
 				9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */,

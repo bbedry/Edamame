@@ -49,6 +49,7 @@ extension SignUpPresenter {
         do {
           try interactor?.validatePassword(pass)
         } catch (let error) {
+//            view?.isValidatePassword(error)
             showValidateError(error)
             return
         }

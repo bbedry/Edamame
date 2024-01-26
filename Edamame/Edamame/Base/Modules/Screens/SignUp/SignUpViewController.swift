@@ -20,7 +20,7 @@ protocol SignUpControllerProtocol: AnyObject {
 }
 
 
-final class SignUpViewController: UIViewController, SignUpControllerProtocol, UITextFieldDelegate {
+final class SignUpViewController: UIViewController, SignUpControllerProtocol {
     
     
     var handler: SignUpControllerProtocolHandler?
@@ -48,22 +48,28 @@ final class SignUpViewController: UIViewController, SignUpControllerProtocol, UI
     }
     
     func showPasswordError(_ error: String) {
-        
-    }
-    
-    @IBAction func textFieldEditingChanged(_ sender: UITextField) {
-        guard let text = sender.text else { return }
-        switch sender {
-        case emailTextField:
-            try? handler?.validateEmailAddress(text)
-        case passwordTextField:
-            try? handler?.validatePassword(text)
-        default: break
+        if error == "validation_digit" {
+            self.checkCharactersCountImage.image = UIImage(named: "approvedPassword")
+            self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
+        } else if error == "validation_min" {
+            self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
+            self.checkCharactersCountImage.image = UIImage(named: "unApprovedPassword")
+        } else if error == "Password is required" {
+            self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
+            self.checkCharactersCountImage.image = UIImage(named: "unApprovedPassword")
+            passwordContainerView.addBorderView(width: 0.5, color: AppColors.secondryColor)
+        } else if error == "validation_digit,validation_min"{
+            self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
+            self.checkCharactersCountImage.image = UIImage(named: "unApprovedPassword")
+            passwordContainerView.addBorderView(width: 0.5, color: AppColors.primaryColor)
+        } else {
+            self.checkContainsNumberImage.image = UIImage(named: "approvedPassword")
+            self.checkCharactersCountImage.image = UIImage(named: "approvedPassword")
+            passwordContainerView.addBorderView(width: 0.5, color: AppColors.primaryColor)
         }
-        
     }
     
-
+    
     @IBAction func showablePassword(_ sender: UIButton) {
         if isShowPass != false  {
             passwordTextField.isSecureTextEntry = true
@@ -77,10 +83,22 @@ final class SignUpViewController: UIViewController, SignUpControllerProtocol, UI
         
     }
     
+    @IBAction func textFieldValueChanged(_ sender: UITextField) {
+        guard let text = sender.text else { return }
+        
+        switch sender {
+        case emailTextField:
+            try? handler?.validateEmailAddress(text)
+        case passwordTextField:
+            try? handler?.validatePassword(text)
+        default: break
+        }
+    }
 }
 
-extension SignUpViewController {
+extension SignUpViewController: UITextFieldDelegate {
     private func setupUI() {
+        self.passwordTextField.delegate = self
         
         emailContainerView.addBorderView(width: 0.5, color: AppColors.outlineColor)
         emailContainerView.addCornerRadius(radius: 25)
@@ -95,4 +113,5 @@ extension SignUpViewController {
         signUpButton.addBorderView(width: 0, color: AppColors.formTextColor)
         signUpButton.addCornerRadius(radius: 25)
     }
+    
 }
