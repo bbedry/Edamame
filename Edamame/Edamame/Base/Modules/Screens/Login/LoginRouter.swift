@@ -15,12 +15,19 @@ class LoginRouter: Router {
     func showScreen(type: ScreenType) {
         switch type {
         case .homeModule:
-            changeRootViewController()
+            presentHomeViewController()
+        case .signUpController:
+            presentSignUpViewController()
         }
     }
     
-    func changeRootViewController() {
+    func presentHomeViewController() {
         AppDelegate.shared.router?.configRootVC(screenType: .homeModule)
+        AppDelegate.shared.window?.rootViewController = AppDelegate.shared.router?.rootVC
+    }
+    
+    func presentSignUpViewController() {
+        AppDelegate.shared.router?.configRootVC(screenType: .signUpModule)
         AppDelegate.shared.window?.rootViewController = AppDelegate.shared.router?.rootVC
     }
     
@@ -29,5 +36,6 @@ class LoginRouter: Router {
 extension LoginRouter {
     enum ScreenType {
         case homeModule
+        case signUpController
     }
 }

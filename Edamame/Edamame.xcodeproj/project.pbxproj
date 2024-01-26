@@ -22,6 +22,14 @@
 		910886FE2B5DCC26006B1BF1 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */; };
 		910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */; };
 		9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7402B62F56B00E4EE78 /* AppColors.swift */; };
+		9189E7442B63022F00E4EE78 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7432B63022F00E4EE78 /* SignUpViewController.swift */; };
+		9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7452B63026200E4EE78 /* SignUpPresenter.swift */; };
+		9189E7482B63027700E4EE78 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7472B63027700E4EE78 /* SignUpRouter.swift */; };
+		9189E74A2B6302C400E4EE78 /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9189E7492B6302C400E4EE78 /* SignUpViewController.storyboard */; };
+		9189E74C2B631CFD00E4EE78 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E74B2B631CFD00E4EE78 /* SignUpInteractor.swift */; };
+		9189E74E2B6323B500E4EE78 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E74D2B6323B500E4EE78 /* ErrorHandling.swift */; };
+		9189E7502B6329E000E4EE78 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E74F2B6329E000E4EE78 /* StringExtension.swift */; };
+		9189E7522B6329EC00E4EE78 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7512B6329EC00E4EE78 /* Regex.swift */; };
 		9192A0552B5FAD99007BF6A4 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192A0542B5FAD99007BF6A4 /* OnBoardingViewController.swift */; };
 		9192A0572B5FADB4007BF6A4 /* OnBoardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192A0562B5FADB4007BF6A4 /* OnBoardingPresenter.swift */; };
 		9192A05B2B5FADE7007BF6A4 /* OnBoardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192A05A2B5FADE7007BF6A4 /* OnBoardingRouter.swift */; };
@@ -76,6 +84,14 @@
 		910886FD2B5DCC26006B1BF1 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		910886FF2B5DCC78006B1BF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9189E7402B62F56B00E4EE78 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		9189E7432B63022F00E4EE78 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9189E7452B63026200E4EE78 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		9189E7472B63027700E4EE78 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		9189E7492B6302C400E4EE78 /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
+		9189E74B2B631CFD00E4EE78 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		9189E74D2B6323B500E4EE78 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		9189E74F2B6329E000E4EE78 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9189E7512B6329EC00E4EE78 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		9192A0542B5FAD99007BF6A4 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		9192A0562B5FADB4007BF6A4 /* OnBoardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPresenter.swift; sourceTree = "<group>"; };
 		9192A05A2B5FADE7007BF6A4 /* OnBoardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingRouter.swift; sourceTree = "<group>"; };
@@ -200,6 +216,7 @@
 		910886F32B5DCBAA006B1BF1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9189E7422B62FE2B00E4EE78 /* SignUp */,
 				9192A0532B5FAD6E007BF6A4 /* OnBoarding */,
 				910886F42B5DCBB6006B1BF1 /* Login */,
 			);
@@ -222,8 +239,21 @@
 			isa = PBXGroup;
 			children = (
 				9189E7402B62F56B00E4EE78 /* AppColors.swift */,
+				9189E74D2B6323B500E4EE78 /* ErrorHandling.swift */,
 			);
 			path = Utilies;
+			sourceTree = "<group>";
+		};
+		9189E7422B62FE2B00E4EE78 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9189E7432B63022F00E4EE78 /* SignUpViewController.swift */,
+				9189E7452B63026200E4EE78 /* SignUpPresenter.swift */,
+				9189E7472B63027700E4EE78 /* SignUpRouter.swift */,
+				9189E7492B6302C400E4EE78 /* SignUpViewController.storyboard */,
+				9189E74B2B631CFD00E4EE78 /* SignUpInteractor.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		9192A0532B5FAD6E007BF6A4 /* OnBoarding */ = {
@@ -266,6 +296,8 @@
 			children = (
 				91FF02B12B61E51700EC438C /* UIViewExtension.swift */,
 				91FF02B32B61E54600EC438C /* CodableExtension.swift */,
+				9189E74F2B6329E000E4EE78 /* StringExtension.swift */,
+				9189E7512B6329EC00E4EE78 /* Regex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,6 +417,7 @@
 				91FF02AE2B61CF9A00EC438C /* Inter-Regular.ttf in Resources */,
 				91FF02AC2B61CF9A00EC438C /* Inter-Light.ttf in Resources */,
 				91FF02AF2B61CF9A00EC438C /* Inter-Bold.ttf in Resources */,
+				9189E74A2B6302C400E4EE78 /* SignUpViewController.storyboard in Resources */,
 				910886C62B5DAE5E006B1BF1 /* Assets.xcassets in Resources */,
 				910886C42B5DAE5D006B1BF1 /* Main.storyboard in Resources */,
 				91FF02AD2B61CF9A00EC438C /* Inter-ExtraBold.ttf in Resources */,
@@ -413,18 +446,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				910886F82B5DCBFE006B1BF1 /* LoginPresenter.swift in Sources */,
+				9189E7522B6329EC00E4EE78 /* Regex.swift in Sources */,
 				910886F12B5DCB1B006B1BF1 /* Router.swift in Sources */,
 				91FF02B22B61E51700EC438C /* UIViewExtension.swift in Sources */,
+				9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */,
+				9189E7482B63027700E4EE78 /* SignUpRouter.swift in Sources */,
 				9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */,
 				910886FA2B5DCC08006B1BF1 /* LoginInteractor.swift in Sources */,
 				910886BD2B5DAE5D006B1BF1 /* AppDelegate.swift in Sources */,
 				910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */,
+				9189E74E2B6323B500E4EE78 /* ErrorHandling.swift in Sources */,
 				910886EF2B5DCB12006B1BF1 /* RootRouter.swift in Sources */,
+				9189E7442B63022F00E4EE78 /* SignUpViewController.swift in Sources */,
 				9192A0552B5FAD99007BF6A4 /* OnBoardingViewController.swift in Sources */,
 				91FF02B42B61E54600EC438C /* CodableExtension.swift in Sources */,
 				910886FC2B5DCC17006B1BF1 /* LoginRouter.swift in Sources */,
 				9192A05B2B5FADE7007BF6A4 /* OnBoardingRouter.swift in Sources */,
+				9189E7502B6329E000E4EE78 /* StringExtension.swift in Sources */,
 				9192A0572B5FADB4007BF6A4 /* OnBoardingPresenter.swift in Sources */,
+				9189E74C2B631CFD00E4EE78 /* SignUpInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

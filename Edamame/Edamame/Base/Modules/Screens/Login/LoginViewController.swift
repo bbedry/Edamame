@@ -7,17 +7,21 @@
 
 import UIKit
 
-protocol LoginViewHandler {
-    func performLogin(_ email: String?, pass: String?)
-    func validateEmail(_ email: String) throws
-    func validatePassword(_ password: String) throws
-}
+
 
 protocol LoginViewProtocol: AnyObject {
     var handler: LoginViewHandler? { get set }
     
     func showEmailError(_ error: String)
     func showPasswordError(_ error: String)
+}
+
+protocol LoginViewHandler {
+    func performLogin(_ email: String?, pass: String?)
+    func validateEmail(_ email: String) throws
+    func validatePassword(_ password: String) throws
+    
+    func presentSignUpController()
 }
 
 class LoginViewController: UIViewController, LoginViewProtocol {
@@ -56,7 +60,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
-        
+        handler?.presentSignUpController()
     }
     @IBAction func showablePassword(_ sender: UIButton) {
         if isShowPass != false  {

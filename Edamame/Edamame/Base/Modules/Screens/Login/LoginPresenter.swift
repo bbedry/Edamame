@@ -33,5 +33,8 @@ class LoginPresenter: LoginPresenterProtocol {
         print(password)
     }
     
+    func presentSignUpController() {
+        router?.showScreen(type: .signUpController)
+    }
     
 }
