@@ -61,7 +61,7 @@ final class SignUpViewController: UIViewController, SignUpControllerProtocol {
             self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
             
         } else if error == "validation_min" {
-            self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")
+            self.checkContainsNumberImage.image = UIImage(named: "approvedPassword")
             self.checkCharactersCountImage.image = UIImage(named: "unApprovedPassword")
         } else if error == "Password is required" {
             self.checkContainsNumberImage.image = UIImage(named: "unApprovedPassword")

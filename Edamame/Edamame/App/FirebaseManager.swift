@@ -11,14 +11,14 @@ import FirebaseAuth
 class FirebaseManager {
     static let shared = FirebaseManager()
 
-    private init() {}
+    init() {}
 
-    func signUp(email: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func signUp(email: String, password: String, completion: @escaping (Result<User?, Error>) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
                 completion(.failure(error))
             } else {
-                self.sendEmailVerification(completion: completion)
+                completion(.success(authResult?.user))
             }
         }
     }

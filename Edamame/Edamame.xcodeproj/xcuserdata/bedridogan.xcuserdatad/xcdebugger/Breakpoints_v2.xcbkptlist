@@ -49,6 +49,21 @@
                   endingLineNumber = "20"
                   offsetFromSymbolStart = "124">
                </Location>
+               <Location
+                  uuid = "2F884DBD-E3CA-4085-9E00-90A8875B411B - b148ec417b3e87b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Edamame.Router.showError(Swift.String) -&gt; ()"
+                  moduleName = "Edamame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bedridogan/Projects/Edamame/Edamame/Edamame/App/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "152">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -96,6 +111,21 @@
                   startingLineNumber = "23"
                   endingLineNumber = "23"
                   offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "53680105-BE45-4614-B538-B6CAD7F46A90 - b148ec417b3e981b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Edamame.Router.showError(Swift.String) -&gt; ()"
+                  moduleName = "Edamame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bedridogan/Projects/Edamame/Edamame/Edamame/App/Router.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "352">
                </Location>
             </Locations>
          </BreakpointContent>

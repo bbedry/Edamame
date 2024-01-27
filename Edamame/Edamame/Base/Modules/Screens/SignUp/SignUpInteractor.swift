@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import FirebaseAuth
 
 protocol SignUpInteractorProtocol {
     func validateEmail(_ email: String?) throws
@@ -14,7 +14,18 @@ protocol SignUpInteractorProtocol {
     func performSignUp(_ email: String?, pass: String?) throws
 }
 
-final class SignUpInteractor: SignUpInteractorProtocol {
+protocol SignUpInteractorOutputProtocol: AnyObject {
+    func signUpResultSuccess(result: UserDataResponse)
+    func signUpResultError(result: Error)
+}
+
+fileprivate var firebaseManager = FirebaseManager()
+
+final class SignUpInteractor  {
+    weak var outPut: SignUpInteractorOutputProtocol?
+}
+
+extension SignUpInteractor: SignUpInteractorProtocol {
     func validateEmail(_ email: String?) throws {
         guard let email = email, !email.trimmed.isEmpty else {
             throw EmailError.empty
@@ -54,17 +65,20 @@ final class SignUpInteractor: SignUpInteractorProtocol {
             throw ValidationError.empty(reason: .fillInformation)
         }
         
-        Auth.auth().createUser(withEmail: email, password: pass) { (AuthDataResult, error) in
-            if let error = error  {
-                print("error creating user: \(error.localizedDescription)")
-            } else {
-                print("user created successfully")
+        firebaseManager.signUp(email: email, password: pass) { [weak self] result in
+            print(result)
+            switch result {
+            case .success(let user):
+                let userModel = UserDataResponse(uid: user?.uid, email: user?.email)
+                self?.outPut?.signUpResultSuccess(result: userModel)
+            case .failure(let error):
+                self?.outPut?.signUpResultError(result: error)
             }
-            
+//            guard let self = self else { return }
+//            outPut?.signUpResult(result: result)
+//        
         }
+        
       
     }
-    
-    
-    
 }

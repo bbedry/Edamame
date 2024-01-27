@@ -27,6 +27,8 @@ final class RootRouter: Router {
             print("home module")
         case .signUpModule:
             rootVC = signUpModule
+        case .verificationModule:
+            rootVC = verificationModule
         }
     }
     
@@ -75,13 +77,29 @@ final class RootRouter: Router {
         let rootController = storyboard.instantiateInitialViewController() as! SignUpViewController
         
         let vc = rootController
+        
         vc.handler = presenter
-       
+        interactor.outPut = presenter
+        
         router.rootVC = vc
         
         presenter.view = vc
         presenter.router = router
         presenter.interactor = interactor
+        return vc
+    }
+    
+    var verificationModule: VerificationViewController {
+        let presenter = VerificationControllerPresenter()
+        let router = VerificationControllerRouter()
+        let interactor = VerificationControllerInteractor()
+        
+        let storyboard = UIStoryboard(name: "VerificationViewController", bundle: nil)
+        let rootController = storyboard.instantiateInitialViewController() as! VerificationViewController
+        
+        let vc = rootController
+        
+        
         return vc
     }
     
@@ -99,6 +117,7 @@ extension RootRouter {
         case onBoarding
         case loginModule
         case signUpModule
+        case verificationModule
         case homeModule
     }
 }

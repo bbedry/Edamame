@@ -49,7 +49,6 @@ extension SignUpPresenter {
         do {
           try interactor?.validatePassword(pass)
         } catch (let error) {
-//            view?.isValidatePassword(error)
             showValidateError(error)
             return
         }
@@ -63,4 +62,16 @@ extension SignUpPresenter {
             return
         }
     }
+}
+
+extension SignUpPresenter: SignUpInteractorOutputProtocol {
+    func signUpResultSuccess(result: UserDataResponse) {
+        router?.showScreen(type: .sendVerificationController)
+    }
+    
+    func signUpResultError(result: Error) {
+        print(result)
+    }
+    
+    
 }
