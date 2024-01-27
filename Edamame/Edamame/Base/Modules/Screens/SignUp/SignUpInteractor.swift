@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import FirebaseAuth
-import FirebaseCore
+
 
 protocol SignUpInteractorProtocol {
     func validateEmail(_ email: String?) throws
