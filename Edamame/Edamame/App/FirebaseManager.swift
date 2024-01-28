@@ -33,12 +33,12 @@ class FirebaseManager {
         }
     }
 
-    private func sendEmailVerification(completion: @escaping (Result<String, Error>) -> Void) {
+    func sendEmailVerification(completion: @escaping (Result<String, Error>) -> Void) {
         guard let user = Auth.auth().currentUser else {
             completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No user is signed in"])))
             return
         }
-
+        user.sendEmailVerification(beforeUpdatingEmail: <#T##String#>, actionCodeSettings: <#T##ActionCodeSettings#>)
         user.sendEmailVerification { (error) in
             if let error = error {
                 completion(.failure(error))
@@ -48,3 +48,4 @@ class FirebaseManager {
         }
     }
 }
+

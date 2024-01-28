@@ -74,9 +74,6 @@ extension SignUpInteractor: SignUpInteractorProtocol {
             case .failure(let error):
                 self?.outPut?.signUpResultError(result: error)
             }
-//            guard let self = self else { return }
-//            outPut?.signUpResult(result: result)
-//        
         }
         
       

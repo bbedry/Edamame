@@ -7,7 +7,22 @@
 
 import Foundation
 
-
-final class VerificationControllerPresenter {
+protocol VerificationControllerPresenterProtocol: VerificationControllerHandler {
+    var view: VerificationControllerProtocol? { get set }
+    var interactor: VerificationControllerInteractorProtocol? { get set }
+    var router: VerificationControllerRouter? { get set }
+}
+final class VerificationControllerPresenter: VerificationControllerPresenterProtocol {
+    weak var view: VerificationControllerProtocol?
+    var interactor: VerificationControllerInteractorProtocol?
+    var router: VerificationControllerRouter?
+ 
     
+  
+}
+
+extension VerificationControllerPresenter {
+    func viewDidLoad() {
+        interactor?.sendVerificationCode()
+    }
 }

@@ -99,6 +99,9 @@ final class RootRouter: Router {
         
         let vc = rootController
         
+        vc.handler = presenter
+        presenter.interactor = interactor
+        presenter.router = router
         
         return vc
     }
