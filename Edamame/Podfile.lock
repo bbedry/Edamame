@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.7.1)
   - FirebaseAppCheckInterop (10.15.0)
   - FirebaseAuth (10.13.0):
     - FirebaseAppCheckInterop (~> 10.0)
@@ -29,12 +30,16 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (3.1.1)
   - PromisesObjC (2.3.1)
+  - SendGrid (2.2.1)
 
 DEPENDENCIES:
+  - Alamofire
   - FirebaseAuth
+  - SendGrid (from `https://github.com/scottkawai/sendgrid-swift.git`)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - FirebaseAppCheckInterop
     - FirebaseAuth
     - FirebaseCore
@@ -43,7 +48,17 @@ SPEC REPOS:
     - GTMSessionFetcher
     - PromisesObjC
 
+EXTERNAL SOURCES:
+  SendGrid:
+    :git: https://github.com/scottkawai/sendgrid-swift.git
+
+CHECKOUT OPTIONS:
+  SendGrid:
+    :commit: 74934cafe4f9d202ee223113e56f0ad300754d14
+    :git: https://github.com/scottkawai/sendgrid-swift.git
+
 SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   FirebaseAppCheckInterop: a8c555b1c2db1d9445e6c3a08a848167ddb7eb51
   FirebaseAuth: dbc8986dc6a9a8de0c3205f171a3e901d8163d0a
   FirebaseCore: 9948a31ff2c6cf323f9b040068201a95d271b68d
@@ -51,7 +66,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
   GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
+  SendGrid: 75853f4d9e7a9d6e6891a29e109ef39f9910e2a5
 
-PODFILE CHECKSUM: 26c2095da4205c078a8e9b1606bb68cbf2f1ce84
+PODFILE CHECKSUM: 1f279e78ab7b96ed976927a0061ba9d5a4ff252f
 
 COCOAPODS: 1.14.3

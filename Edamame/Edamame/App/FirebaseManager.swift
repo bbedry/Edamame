@@ -7,12 +7,15 @@
 
 import Foundation
 import FirebaseAuth
+import SendGrid
 
 class FirebaseManager {
     static let shared = FirebaseManager()
 
     init() {}
-
+    
+    
+    
     func signUp(email: String, password: String, completion: @escaping (Result<User?, Error>) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
@@ -33,19 +36,5 @@ class FirebaseManager {
         }
     }
 
-    func sendEmailVerification(completion: @escaping (Result<String, Error>) -> Void) {
-        guard let user = Auth.auth().currentUser else {
-            completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No user is signed in"])))
-            return
-        }
-        user.sendEmailVerification(beforeUpdatingEmail: <#T##String#>, actionCodeSettings: <#T##ActionCodeSettings#>)
-        user.sendEmailVerification { (error) in
-            if let error = error {
-                completion(.failure(error))
-            } else {
-                completion(.success("Email verification sent successfully!"))
-            }
-        }
-    }
 }
 

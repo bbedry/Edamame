@@ -10,12 +10,13 @@ import UIKit
 
 final class RootRouter: Router {
     var rootVC: UIViewController?
+    var currentUser: UserDataResponse?
     
-    init(screenType: ScreenType) {
-        configRootVC(screenType: screenType)
+    init(screenType: ScreenType ) {
+        configRootVC(currentUser, screenType: screenType)
     }
     
-    func configRootVC(screenType: ScreenType) {
+    func configRootVC(_ currentUser: UserDataResponse? = nil, screenType: ScreenType ) {
         switch screenType {
         case .onBoarding:
             rootVC = onBoarding
@@ -98,6 +99,8 @@ final class RootRouter: Router {
         let rootController = storyboard.instantiateInitialViewController() as! VerificationViewController
         
         let vc = rootController
+        
+        interactor.email = currentUser?.email
         
         vc.handler = presenter
         presenter.interactor = interactor

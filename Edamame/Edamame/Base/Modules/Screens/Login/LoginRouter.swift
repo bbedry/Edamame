@@ -22,7 +22,7 @@ class LoginRouter: Router {
     }
     
     func presentHomeViewController() {
-        AppDelegate.shared.router?.configRootVC(screenType: .homeModule)
+//        AppDelegate.shared.router?.configRootVC(.homeModule, screenType: <#UserDataResponse#>)
         AppDelegate.shared.window?.rootViewController = AppDelegate.shared.router?.rootVC
     }
     

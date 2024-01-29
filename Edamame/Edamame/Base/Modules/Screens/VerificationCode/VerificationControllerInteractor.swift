@@ -11,18 +11,22 @@ protocol VerificationControllerInteractorProtocol {
     func sendVerificationCode()
 }
 
-fileprivate var firebasemanager = FirebaseManager()
+fileprivate var verificationService: NetworkServiceProtocol = NetworkService()
 
 final class VerificationControllerInteractor {
-    
+    var email: String?
 }
 
 extension VerificationControllerInteractor: VerificationControllerInteractorProtocol {
     func sendVerificationCode() {
-        firebasemanager.sendEmailVerification { [weak self] result in
+        verificationService.sendVerificationCode(email: self.email ?? "bedridogn@gmail.com") { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            
             print(result)
+        }
         }
     }
     
     
-}

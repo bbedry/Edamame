@@ -32,6 +32,10 @@
 		911D5EA12B65C1C200F30365 /* VerificationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */; };
 		91439F882B64108E0043B855 /* ConsValidataion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91439F872B64108E0043B855 /* ConsValidataion.swift */; };
 		91439F8A2B6472080043B855 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91439F892B6472080043B855 /* GoogleService-Info.plist */; };
+		915BB6C62B671A5B00A8B3F5 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6C52B671A5B00A8B3F5 /* NetworkRouter.swift */; };
+		915BB6C82B671EA200A8B3F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */; };
+		915BB6CA2B671EBF00A8B3F5 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */; };
+		915BB6CC2B67217100A8B3F5 /* VerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6CB2B67217100A8B3F5 /* VerificationResponse.swift */; };
 		9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7402B62F56B00E4EE78 /* AppColors.swift */; };
 		9189E7442B63022F00E4EE78 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7432B63022F00E4EE78 /* SignUpViewController.swift */; };
 		9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9189E7452B63026200E4EE78 /* SignUpPresenter.swift */; };
@@ -111,6 +115,10 @@
 		911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationControllerRouter.swift; sourceTree = "<group>"; };
 		91439F872B64108E0043B855 /* ConsValidataion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsValidataion.swift; sourceTree = "<group>"; };
 		91439F892B6472080043B855 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		915BB6C52B671A5B00A8B3F5 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		915BB6CB2B67217100A8B3F5 /* VerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationResponse.swift; sourceTree = "<group>"; };
 		9189E7402B62F56B00E4EE78 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		9189E7432B63022F00E4EE78 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9189E7452B63026200E4EE78 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
@@ -257,6 +265,7 @@
 		910886ED2B5DCAEE006B1BF1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				915BB6C42B671A3600A8B3F5 /* Core */,
 				911D5E942B65A3DE00F30365 /* Entity */,
 				9189E73F2B62F55000E4EE78 /* Utilies */,
 				910886F22B5DCB8E006B1BF1 /* Modules */,
@@ -301,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				911D5E952B65A3F500F30365 /* UserDataResponse.swift */,
+				915BB6CB2B67217100A8B3F5 /* VerificationResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -315,6 +325,16 @@
 				911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */,
 			);
 			path = VerificationCode;
+			sourceTree = "<group>";
+		};
+		915BB6C42B671A3600A8B3F5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				915BB6C52B671A5B00A8B3F5 /* NetworkRouter.swift */,
+				915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */,
+				915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		9189E73F2B62F55000E4EE78 /* Utilies */ = {
@@ -651,6 +671,8 @@
 				911D5E962B65A3F500F30365 /* UserDataResponse.swift in Sources */,
 				910886FA2B5DCC08006B1BF1 /* LoginInteractor.swift in Sources */,
 				910886BD2B5DAE5D006B1BF1 /* AppDelegate.swift in Sources */,
+				915BB6C62B671A5B00A8B3F5 /* NetworkRouter.swift in Sources */,
+				915BB6C82B671EA200A8B3F5 /* NetworkManager.swift in Sources */,
 				910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */,
 				9189E74E2B6323B500E4EE78 /* ErrorHandling.swift in Sources */,
 				910886EF2B5DCB12006B1BF1 /* RootRouter.swift in Sources */,
@@ -661,9 +683,11 @@
 				911D5E9B2B65C18C00F30365 /* VerificationViewController.swift in Sources */,
 				910886FC2B5DCC17006B1BF1 /* LoginRouter.swift in Sources */,
 				9192A05B2B5FADE7007BF6A4 /* OnBoardingRouter.swift in Sources */,
+				915BB6CC2B67217100A8B3F5 /* VerificationResponse.swift in Sources */,
 				9189E7502B6329E000E4EE78 /* StringExtension.swift in Sources */,
 				9192A0572B5FADB4007BF6A4 /* OnBoardingPresenter.swift in Sources */,
 				911D5EA12B65C1C200F30365 /* VerificationControllerRouter.swift in Sources */,
+				915BB6CA2B671EBF00A8B3F5 /* NetworkManagerProtocol.swift in Sources */,
 				9189E74C2B631CFD00E4EE78 /* SignUpInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,7 +874,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -883,7 +907,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

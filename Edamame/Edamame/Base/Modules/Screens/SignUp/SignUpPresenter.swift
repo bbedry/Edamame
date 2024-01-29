@@ -66,7 +66,7 @@ extension SignUpPresenter {
 
 extension SignUpPresenter: SignUpInteractorOutputProtocol {
     func signUpResultSuccess(result: UserDataResponse) {
-        router?.showScreen(type: .sendVerificationController)
+        router?.showScreen(type: .sendVerificationController, result)
     }
     
     func signUpResultError(result: Error) {

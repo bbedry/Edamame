@@ -12,15 +12,15 @@ import UIKit
 final class SignUpRouter: Router {
     var rootVC: UIViewController?
     
-    func showScreen(type: ScreenType) {
+    func showScreen(type: ScreenType, _ currentUser: UserDataResponse?) {
         switch type {
         case .sendVerificationController:
-            presentVerificationController()
+            presentVerificationController(currentUser)
         }
     }
     
-    func presentVerificationController() {
-        AppDelegate.shared.router?.configRootVC(screenType: .verificationModule)
+    func presentVerificationController(_ currentUser: UserDataResponse?) {
+        AppDelegate.shared.router?.configRootVC(currentUser, screenType: .verificationModule )
         AppDelegate.shared.window?.rootViewController = AppDelegate.shared.router?.rootVC
     }
     
