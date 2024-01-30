@@ -16,7 +16,7 @@ enum NetworkRouter: URLRequestConvertible {
     }
     
     var sendGridApiKey: String {
-        return "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"
+        return "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"
     }
     var otpCode: String {
         return generateOTP()
@@ -61,20 +61,21 @@ enum NetworkRouter: URLRequestConvertible {
         let url = sendGridURL.appendingPathComponent(path)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
-        
         if let headers = headers {
             for (key, value) in headers {
                 urlRequest.setValue(value, forHTTPHeaderField: key)
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Authorization")
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//                urlRequest.addValue(<#T##value: String##String#>, forHTTPHeaderField: <#T##String#>)
             }
         } else {
             urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         }
         
-        let encoding: ParameterEncoding = (method == .post) ? JSONEncoding.default : URLEncoding.default
+        let encoding: ParameterEncoding = (method == .post) ? URLEncoding.default : URLEncoding.default
         return try encoding.encode(urlRequest, with: parameters)
+    
     }
 }
 

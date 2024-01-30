@@ -12,6 +12,7 @@ protocol VerificationControllerInteractorProtocol {
 }
 
 fileprivate var verificationService: NetworkServiceProtocol = NetworkService()
+fileprivate var firebasemanager = FirebaseManager()
 
 final class VerificationControllerInteractor {
     var email: String?
@@ -19,13 +20,16 @@ final class VerificationControllerInteractor {
 
 extension VerificationControllerInteractor: VerificationControllerInteractorProtocol {
     func sendVerificationCode() {
-        verificationService.sendVerificationCode(email: self.email ?? "bedridogn@gmail.com") { [weak self] result in
-            guard let self = self else {
-                return
-            }
-            
-            print(result)
-        }
+        
+        firebasemanager.sendVerification()
+        
+//        verificationService.sendVerificationCode(email: self.email ?? "bedridogn@gmail.com") { [weak self] result in
+//            guard let self = self else {
+//                return
+//            }
+//            
+//            print(result)
+//        }
         }
     }
     
