@@ -25,10 +25,7 @@
 
 #import "FirebaseAuth/Sources/Public/FirebaseAuth/FirebaseAuth.h"
 
-#import "FirebaseAppCheck/Interop/FIRAppCheckInterop.h"
-#import "FirebaseAppCheck/Interop/FIRAppCheckTokenResultInterop.h"
 #import "FirebaseAuth/Sources/Auth/FIRAuthGlobalWorkQueue.h"
-#import "FirebaseAuth/Sources/Auth/FIRAuth_Internal.h"
 #import "FirebaseAuth/Sources/AuthProvider/OAuth/FIROAuthCredential_Internal.h"
 #import "FirebaseAuth/Sources/Backend/RPC/FIRCreateAuthURIRequest.h"
 #import "FirebaseAuth/Sources/Backend/RPC/FIRCreateAuthURIResponse.h"
@@ -44,8 +41,6 @@
 #import "FirebaseAuth/Sources/Backend/RPC/FIRGetProjectConfigResponse.h"
 #import "FirebaseAuth/Sources/Backend/RPC/FIRResetPasswordRequest.h"
 #import "FirebaseAuth/Sources/Backend/RPC/FIRResetPasswordResponse.h"
-#import "FirebaseAuth/Sources/Backend/RPC/FIRRevokeTokenRequest.h"
-#import "FirebaseAuth/Sources/Backend/RPC/FIRRevokeTokenResponse.h"
 #import "FirebaseAuth/Sources/Backend/RPC/FIRSecureTokenRequest.h"
 #import "FirebaseAuth/Sources/Backend/RPC/FIRSecureTokenResponse.h"
 #import "FirebaseAuth/Sources/Backend/RPC/FIRSendVerificationCodeRequest.h"
@@ -74,8 +69,6 @@
 
 #import "FirebaseAuth/Sources/AuthProvider/Phone/FIRPhoneAuthCredential_Internal.h"
 #import "FirebaseAuth/Sources/MultiFactor/Phone/FIRPhoneMultiFactorInfo+Internal.h"
-#import "FirebaseAuth/Sources/MultiFactor/TOTP/FIRTOTPMultiFactorInfo.h"
-
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
@@ -475,11 +468,6 @@ static NSString *const kSecondFactorLimitExceededErrorMessage = @"SECOND_FACTOR_
  */
 static NSString *const kUnsupportedFirstFactorErrorMessage = @"UNSUPPORTED_FIRST_FACTOR";
 
-/** @var kBlockingCloudFunctionErrorResponse
- @brief This is the error message blocking Cloud Functions.
- */
-static NSString *const kBlockingCloudFunctionErrorResponse = @"BLOCKING_FUNCTION_ERROR_RESPONSE";
-
 /** @var kEmailChangeNeedsVerificationErrorMessage
  @brief This is the error message the server will respond with if changing an unverified email.
  */
@@ -610,13 +598,7 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
 + (void)verifyClient:(id)request callback:(FIRVerifyClientResponseCallback)callback {
   [[self implementation] verifyClient:request callback:callback];
 }
-
 #endif
-
-+ (void)revokeToken:(FIRRevokeTokenRequest *)request
-           callback:(FIRRevokeTokenResponseCallback)callback {
-  [[self implementation] revokeToken:request callback:callback];
-}
 
 + (void)resetPassword:(FIRResetPasswordRequest *)request
              callback:(FIRResetPasswordCallback)callback {
@@ -628,10 +610,9 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
                                     GTMFetcherStandardUserAgentString(nil)];
 }
 
-+ (void)requestWithURL:(NSURL *)URL
-             contentType:(NSString *)contentType
-    requestConfiguration:(FIRAuthRequestConfiguration *)requestConfiguration
-       completionHandler:(void (^)(NSMutableURLRequest *_Nullable))completionHandler {
++ (NSMutableURLRequest *)requestWithURL:(NSURL *)URL
+                            contentType:(NSString *)contentType
+                   requestConfiguration:(FIRAuthRequestConfiguration *)requestConfiguration {
   NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
   [request setValue:contentType forHTTPHeaderField:@"Content-Type"];
   NSString *additionalFrameworkMarker =
@@ -655,23 +636,7 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
   if (languageCode.length) {
     [request setValue:languageCode forHTTPHeaderField:kFirebaseLocalHeader];
   }
-  if (requestConfiguration.appCheck) {
-    [requestConfiguration.appCheck
-        getTokenForcingRefresh:false
-                    completion:^(id<FIRAppCheckTokenResultInterop> _Nonnull tokenResult) {
-                      if (tokenResult.error) {
-                        FIRLogWarning(kFIRLoggerAuth, @"I-AUT000018",
-                                      @"Error getting App Check token; using placeholder token "
-                                      @"instead. Error: %@",
-                                      tokenResult.error);
-                      }
-                      [request setValue:tokenResult.token
-                          forHTTPHeaderField:@"X-Firebase-AppCheck"];
-                      completionHandler(request);
-                    }];
-  } else {
-    completionHandler(request);
-  }
+  return request;
 }
 
 @end
@@ -705,19 +670,17 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
                                    contentType:(NSString *)contentType
                              completionHandler:
                                  (void (^)(NSData *_Nullable, NSError *_Nullable))handler {
-  [FIRAuthBackend requestWithURL:URL
-                     contentType:contentType
-            requestConfiguration:requestConfiguration
-               completionHandler:^(NSMutableURLRequest *request) {
-                 GTMSessionFetcher *fetcher = [self->_fetcherService fetcherWithRequest:request];
-                 NSString *emulatorHostAndPort = requestConfiguration.emulatorHostAndPort;
-                 if (emulatorHostAndPort) {
-                   fetcher.allowLocalhostRequest = YES;
-                   fetcher.allowedInsecureSchemes = @[ @"http" ];
-                 }
-                 fetcher.bodyData = body;
-                 [fetcher beginFetchWithCompletionHandler:handler];
-               }];
+  NSMutableURLRequest *request = [FIRAuthBackend requestWithURL:URL
+                                                    contentType:contentType
+                                           requestConfiguration:requestConfiguration];
+  GTMSessionFetcher *fetcher = [_fetcherService fetcherWithRequest:request];
+  NSString *emulatorHostAndPort = requestConfiguration.emulatorHostAndPort;
+  if (emulatorHostAndPort) {
+    fetcher.allowLocalhostRequest = YES;
+    fetcher.allowedInsecureSchemes = @[ @"http" ];
+  }
+  fetcher.bodyData = body;
+  [fetcher beginFetchWithCompletionHandler:handler];
 }
 
 @end
@@ -800,27 +763,15 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
                } else {
                  if (!response.IDToken && response.MFAInfo) {
 #if TARGET_OS_IOS
-                   NSMutableArray<FIRMultiFactorInfo *> *multiFactorInfoArray =
-                       [[NSMutableArray alloc] init];
+                   NSMutableArray<FIRMultiFactorInfo *> *multiFactorInfo = [NSMutableArray array];
                    for (FIRAuthProtoMFAEnrollment *MFAEnrollment in response.MFAInfo) {
-                     if (MFAEnrollment.phoneInfo) {
-                       FIRMultiFactorInfo *multiFactorInfo =
-                           [[FIRPhoneMultiFactorInfo alloc] initWithProto:MFAEnrollment];
-                       [multiFactorInfoArray addObject:multiFactorInfo];
-                     } else if (MFAEnrollment.TOTPInfo) {
-                       FIRMultiFactorInfo *multiFactorInfo =
-                           [[FIRTOTPMultiFactorInfo alloc] initWithProto:MFAEnrollment];
-                       [multiFactorInfoArray addObject:multiFactorInfo];
-                     } else {
-                       FIRLogError(kFIRLoggerAuth, @"I-AUT000020",
-                                   @"Multifactor type is not supported");
-                     }
+                     FIRPhoneMultiFactorInfo *info =
+                         [[FIRPhoneMultiFactorInfo alloc] initWithProto:MFAEnrollment];
+                     [multiFactorInfo addObject:info];
                    }
                    NSError *multiFactorRequiredError = [FIRAuthErrorUtils
                        secondFactorRequiredErrorWithPendingCredential:response.MFAPendingCredential
-                                                                hints:multiFactorInfoArray
-                                                                 auth:request.requestConfiguration
-                                                                          .auth];
+                                                                hints:multiFactorInfo];
                    callback(nil, multiFactorRequiredError);
 #endif
                  } else {
@@ -858,25 +809,13 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
 #if TARGET_OS_IOS
                    NSMutableArray<FIRMultiFactorInfo *> *multiFactorInfo = [NSMutableArray array];
                    for (FIRAuthProtoMFAEnrollment *MFAEnrollment in response.MFAInfo) {
-                     // check which MFA factors are enabled.
-                     if (MFAEnrollment.phoneInfo != nil) {
-                       FIRPhoneMultiFactorInfo *info =
-                           [[FIRPhoneMultiFactorInfo alloc] initWithProto:MFAEnrollment];
-                       [multiFactorInfo addObject:info];
-                     } else if (MFAEnrollment.TOTPInfo != nil) {
-                       FIRTOTPMultiFactorInfo *info =
-                           [[FIRTOTPMultiFactorInfo alloc] initWithProto:MFAEnrollment];
-                       [multiFactorInfo addObject:info];
-                     } else {
-                       FIRLogError(kFIRLoggerAuth, @"I-AUT000021",
-                                   @"Multifactor type is not supported");
-                     }
+                     FIRPhoneMultiFactorInfo *info =
+                         [[FIRPhoneMultiFactorInfo alloc] initWithProto:MFAEnrollment];
+                     [multiFactorInfo addObject:info];
                    }
                    NSError *multiFactorRequiredError = [FIRAuthErrorUtils
                        secondFactorRequiredErrorWithPendingCredential:response.MFAPendingCredential
-                                                                hints:multiFactorInfo
-                                                                 auth:request.requestConfiguration
-                                                                          .auth];
+                                                                hints:multiFactorInfo];
                    callback(nil, multiFactorRequiredError);
 #endif
                  } else {
@@ -898,27 +837,15 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
                } else {
                  if (!response.IDToken && response.MFAInfo) {
 #if TARGET_OS_IOS
-                   NSMutableArray<FIRMultiFactorInfo *> *multiFactorInfoArray =
-                       [[NSMutableArray alloc] init];
+                   NSMutableArray<FIRMultiFactorInfo *> *multiFactorInfo = [NSMutableArray array];
                    for (FIRAuthProtoMFAEnrollment *MFAEnrollment in response.MFAInfo) {
-                     if (MFAEnrollment.phoneInfo) {
-                       FIRMultiFactorInfo *multiFactorInfo =
-                           [[FIRPhoneMultiFactorInfo alloc] initWithProto:MFAEnrollment];
-                       [multiFactorInfoArray addObject:multiFactorInfo];
-                     } else if (MFAEnrollment.TOTPInfo) {
-                       FIRMultiFactorInfo *multiFactorInfo =
-                           [[FIRTOTPMultiFactorInfo alloc] initWithProto:MFAEnrollment];
-                       [multiFactorInfoArray addObject:multiFactorInfo];
-                     } else {
-                       FIRLogError(kFIRLoggerAuth, @"I-AUT000022",
-                                   @"Multifactor type is not supported");
-                     }
+                     FIRPhoneMultiFactorInfo *info =
+                         [[FIRPhoneMultiFactorInfo alloc] initWithProto:MFAEnrollment];
+                     [multiFactorInfo addObject:info];
                    }
                    NSError *multiFactorRequiredError = [FIRAuthErrorUtils
                        secondFactorRequiredErrorWithPendingCredential:response.MFAPendingCredential
-                                                                hints:multiFactorInfoArray
-                                                                 auth:request.requestConfiguration
-                                                                          .auth];
+                                                                hints:multiFactorInfo];
                    callback(nil, multiFactorRequiredError);
 #endif
                  } else {
@@ -1029,24 +956,7 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
                  callback(response, nil);
                }];
 }
-
 #endif
-
-- (void)revokeToken:(FIRRevokeTokenRequest *)request
-           callback:(FIRRevokeTokenResponseCallback)callback {
-  FIRRevokeTokenResponse *response = [[FIRRevokeTokenResponse alloc] init];
-  [self
-      postWithRequest:request
-             response:response
-             callback:^(NSError *error) {
-               if (error) {
-                 callback(nil, [FIRAuthErrorUtils
-                                   invalidCredentialErrorWithMessage:[error localizedDescription]]);
-                 return;
-               }
-               callback(response, nil);
-             }];
-}
 
 - (void)resetPassword:(FIRResetPasswordRequest *)request
              callback:(FIRResetPasswordCallback)callback {
@@ -1535,11 +1445,6 @@ static id<FIRAuthBackendImplementation> gBackendImplementation;
 
   if ([shortErrorMessage isEqualToString:kUnsupportedTenantOperation]) {
     return [FIRAuthErrorUtils unsupportedTenantOperationError];
-  }
-
-  if ([shortErrorMessage isEqualToString:kBlockingCloudFunctionErrorResponse]) {
-    return
-        [FIRAuthErrorUtils blockingCloudFunctionServerResponseWithMessage:serverDetailErrorMessage];
   }
 
   // In this case we handle an error that might be specified in the underlying errors dictionary,

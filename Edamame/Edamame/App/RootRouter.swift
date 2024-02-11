@@ -8,15 +8,19 @@
 import Foundation
 import UIKit
 
-final class RootRouter: Router {
+
+
+final class RootRouter: Router, SendVerificationCodeRouter {
+  
+    
     var rootVC: UIViewController?
-    var currentUser: UserDataResponse?
+    var userData: UserDataResponse?
     
     init(screenType: ScreenType ) {
-        configRootVC(currentUser, screenType: screenType)
+        configRootVC(screenType: screenType)
     }
     
-    func configRootVC(_ currentUser: UserDataResponse? = nil, screenType: ScreenType ) {
+    func configRootVC(screenType: ScreenType ) {
         switch screenType {
         case .onBoarding:
             rootVC = onBoarding
@@ -30,6 +34,8 @@ final class RootRouter: Router {
             rootVC = signUpModule
         case .verificationModule:
             rootVC = verificationModule
+            
+            
         }
     }
     
@@ -53,6 +59,8 @@ final class RootRouter: Router {
     
     var loginModule: LoginViewController {
         let presenter = LoginPresenter()
+        let router = LoginRouter()
+        let interactor = LoginInteractor()
         
         let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
         let rootController = storyboard.instantiateInitialViewController() as! LoginViewController
@@ -60,11 +68,11 @@ final class RootRouter: Router {
         let vc = rootController
         vc.handler = presenter
         
-        let router = LoginRouter()
-        router.rootVC = vc
         
+        router.rootVC = vc
         presenter.view = vc
         presenter.router = router
+        presenter.interactor = interactor
         
         return vc
     }
@@ -78,17 +86,21 @@ final class RootRouter: Router {
         let rootController = storyboard.instantiateInitialViewController() as! SignUpViewController
         
         let vc = rootController
+        router.delegate = self
         
         vc.handler = presenter
         interactor.outPut = presenter
         
         router.rootVC = vc
+       
         
         presenter.view = vc
         presenter.router = router
         presenter.interactor = interactor
         return vc
     }
+    
+  
     
     var verificationModule: VerificationViewController {
         let presenter = VerificationControllerPresenter()
@@ -100,21 +112,22 @@ final class RootRouter: Router {
         
         let vc = rootController
         
-        interactor.email = currentUser?.email
         
         vc.handler = presenter
         presenter.interactor = interactor
         presenter.router = router
+        vc.sendingEmail = userData?.email
         
         return vc
     }
-    
-    
-//
-//    var homeModule: UITabBarController {
-//
-//    }
-    
+
+}
+extension RootRouter {
+    func passUserDataToVerification(_ userData: UserDataResponse?) {
+        
+        self.userData = userData
+        
+    }
 }
 
 

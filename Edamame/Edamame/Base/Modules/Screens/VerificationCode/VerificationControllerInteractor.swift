@@ -8,29 +8,44 @@
 import Foundation
 
 protocol VerificationControllerInteractorProtocol {
-    func sendVerificationCode()
+    func sendVerificationCode(_ sendingEmail: String?)
 }
 
 fileprivate var verificationService: NetworkServiceProtocol = NetworkService()
-fileprivate var firebasemanager = FirebaseManager()
+fileprivate var sendGridManager = SendGridManager()
 
 final class VerificationControllerInteractor {
-    var email: String?
+    var otpCode: String? {
+        return generateOTP()
+    }
+    
 }
 
 extension VerificationControllerInteractor: VerificationControllerInteractorProtocol {
-    func sendVerificationCode() {
-        
-        firebasemanager.sendVerification()
-        
-//        verificationService.sendVerificationCode(email: self.email ?? "bedridogn@gmail.com") { [weak self] result in
-//            guard let self = self else {
-//                return
-//            }
-//            
-//            print(result)
-//        }
+    func sendVerificationCode(_ sendingEmail: String?) {
+                
+        sendGridManager.sendVerification(sendingEmail ?? "", self.otpCode ?? "")
+        sendGridManager.didSuccess = {
+            
+            }
         }
     }
+
+extension VerificationControllerInteractor {
+    func generateOTP() -> String {
+        let digit = "0123456789"
+        let otpLength = 4
+        var otp = ""
+        
+        for _ in 0..<otpLength {
+            let randomIndex = Int(arc4random_uniform(UInt32(digit.count)))
+            let digits = digit[digit.index(digit.startIndex, offsetBy: randomIndex)]
+            otp.append(digits)
+        }
+        
+        return otp
+    }
+}
+
     
     

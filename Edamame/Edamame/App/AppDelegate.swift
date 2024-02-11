@@ -7,6 +7,9 @@
 
 import UIKit
 import FirebaseCore
+import GoogleSignIn
+import FirebaseAuth
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,10 +27,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        GIDSignIn.sharedInstance.delegate = self
         FirebaseApp.configure()
+        
+        
         openOnBoardingPage()
         
+        
+        
         return true
+    }
+    
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        let handled = GIDSignIn.sharedInstance.handle(url)
+        return handled
     }
     
     func openOnBoardingPage() {

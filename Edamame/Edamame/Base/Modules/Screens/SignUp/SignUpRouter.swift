@@ -8,19 +8,31 @@
 import Foundation
 import UIKit
 
+protocol SendVerificationCodeRouter: AnyObject {
+    func passUserDataToVerification(_ userData: UserDataResponse?)
+}
 
-final class SignUpRouter: Router {
+final class SignUpRouter: Router, SendVerificationCodeRouter {
+  
     var rootVC: UIViewController?
+    weak var delegate: SendVerificationCodeRouter?
     
-    func showScreen(type: ScreenType, _ currentUser: UserDataResponse?) {
-        switch type {
-        case .sendVerificationController:
-            presentVerificationController(currentUser)
-        }
+    func passUserDataToVerification(_ data: UserDataResponse?) {
+        delegate?.passUserDataToVerification(data)
+        presentVerificationController()
+      
     }
     
-    func presentVerificationController(_ currentUser: UserDataResponse?) {
-        AppDelegate.shared.router?.configRootVC(currentUser, screenType: .verificationModule )
+    #warning("bu metoda gerek kalmayabilir o yüzden commente alıyorum.")
+//    func showScreen(type: ScreenType) {
+//        switch type {
+//        case .sendVerificationController:
+//            presentVerificationController()
+//        }
+//    }
+    
+    func presentVerificationController() {
+        AppDelegate.shared.router?.configRootVC(screenType: .verificationModule )
         AppDelegate.shared.window?.rootViewController = AppDelegate.shared.router?.rootVC
     }
     

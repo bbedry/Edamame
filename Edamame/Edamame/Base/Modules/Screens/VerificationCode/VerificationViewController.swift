@@ -8,13 +8,12 @@
 import UIKit
 
 protocol VerificationControllerHandler {
-    func viewDidLoad()
+    func viewDidLoad(_ sendingEmail: String?)
+    func sendVerificationCode(_ sendingEmail: String?)
 }
 
 protocol VerificationControllerProtocol: AnyObject {
     var handler: VerificationControllerHandler? { get set }
-    
-    
 }
 
 class VerificationViewController: UIViewController, VerificationControllerProtocol {
@@ -36,15 +35,18 @@ class VerificationViewController: UIViewController, VerificationControllerProtoc
     @IBOutlet weak var verifyButton: UIButton!
     @IBOutlet weak var sendCodeAgainButton: UIButton!
     
+    var sendingEmail: String?
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        handler?.viewDidLoad()
+        handler?.viewDidLoad(self.sendingEmail)
     }
     
     @IBAction func verifyButtonTapped(_ sender: UIButton) {
         
+        
+//        handler?.sendVerificationCode()
     }
     
     @IBAction func sendCodeAgainButtonTapped(_ sender: UIButton) {

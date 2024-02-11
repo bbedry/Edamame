@@ -19,22 +19,60 @@ class LoginPresenter: LoginPresenterProtocol {
     var view: LoginViewProtocol?
     var interactor: LoginInteractorProtocol?
     var router: LoginRouter?
-   
     
-    func performLogin(_ email: String?, pass: String?) {
-        print(email)
+    func showValidateError(_ error: Error) {
+        if let error = error as? EmailError {
+            view?.showEmailError(error.localizedDescription)
+        } else if let error = error as? PasswordError {
+            view?.showPasswordError(error.localizedDescription)
+        } else if let error = error as? ValidationError {
+            router?.showError(error.localizedDescription)
+        }
+    }
+   
+ 
+    
+}
+
+extension LoginPresenter {
+    
+    func performGoogleLogin(_ email: String?, _ pass: String?) throws {
+        do {
+//            try interactor?.performGoogleLogin(email, pass)
+        } catch (let error) {
+            showValidateError(error)
+            return
+        }
+    }
+    func performLogin(_ email: String?, pass: String?) throws {
+        do {
+            try interactor?.login(email: email, password: pass)
+        } catch (let error) {
+            showValidateError(error)
+            return
+        }
     }
     
     func validateEmail(_ email: String) throws {
-        print(email)
+        do {
+            try interactor?.validateEmail(email)
+        } catch (let error) {
+            showValidateError(error)
+            return
+        }
     }
     
     func validatePassword(_ password: String) throws {
-        print(password)
+        do {
+          try interactor?.validatePassword(password)
+        } catch (let error) {
+            showValidateError(error)
+            return
+        }
+
     }
     
     func presentSignUpController() {
         router?.showScreen(type: .signUpController)
     }
-    
 }

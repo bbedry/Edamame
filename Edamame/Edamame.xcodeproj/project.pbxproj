@@ -31,7 +31,8 @@
 		911D5E9F2B65C1B100F30365 /* VerificationControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D5E9E2B65C1B100F30365 /* VerificationControllerInteractor.swift */; };
 		911D5EA12B65C1C200F30365 /* VerificationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */; };
 		91439F882B64108E0043B855 /* ConsValidataion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91439F872B64108E0043B855 /* ConsValidataion.swift */; };
-		91439F8A2B6472080043B855 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91439F892B6472080043B855 /* GoogleService-Info.plist */; };
+		914BCBB32B78FC7C000DAC40 /* SendGridManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BCBB22B78FC7C000DAC40 /* SendGridManager.swift */; };
+		9159C93E2B7251750011439B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9159C93D2B7251750011439B /* GoogleService-Info.plist */; };
 		915BB6C62B671A5B00A8B3F5 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6C52B671A5B00A8B3F5 /* NetworkRouter.swift */; };
 		915BB6C82B671EA200A8B3F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */; };
 		915BB6CA2B671EBF00A8B3F5 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */; };
@@ -114,7 +115,8 @@
 		911D5E9E2B65C1B100F30365 /* VerificationControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationControllerInteractor.swift; sourceTree = "<group>"; };
 		911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationControllerRouter.swift; sourceTree = "<group>"; };
 		91439F872B64108E0043B855 /* ConsValidataion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsValidataion.swift; sourceTree = "<group>"; };
-		91439F892B6472080043B855 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		914BCBB22B78FC7C000DAC40 /* SendGridManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendGridManager.swift; sourceTree = "<group>"; };
+		9159C93D2B7251750011439B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		915BB6C52B671A5B00A8B3F5 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
@@ -229,7 +231,7 @@
 				910886C52B5DAE5E006B1BF1 /* Assets.xcassets */,
 				910886C72B5DAE5E006B1BF1 /* LaunchScreen.storyboard */,
 				910886CA2B5DAE5E006B1BF1 /* Info.plist */,
-				91439F892B6472080043B855 /* GoogleService-Info.plist */,
+				9159C93D2B7251750011439B /* GoogleService-Info.plist */,
 			);
 			path = Edamame;
 			sourceTree = "<group>";
@@ -257,7 +259,6 @@
 				910886BC2B5DAE5D006B1BF1 /* AppDelegate.swift */,
 				910886EE2B5DCB12006B1BF1 /* RootRouter.swift */,
 				910886F02B5DCB1B006B1BF1 /* Router.swift */,
-				91188ED92B647CA800C5749B /* FirebaseManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -327,12 +328,38 @@
 			path = VerificationCode;
 			sourceTree = "<group>";
 		};
+		914BCBAF2B78FC2C000DAC40 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */,
+				915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */,
+				915BB6C52B671A5B00A8B3F5 /* NetworkRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		914BCBB02B78FC33000DAC40 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				91188ED92B647CA800C5749B /* FirebaseManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		914BCBB12B78FC39000DAC40 /* SendGrid */ = {
+			isa = PBXGroup;
+			children = (
+				914BCBB22B78FC7C000DAC40 /* SendGridManager.swift */,
+			);
+			path = SendGrid;
+			sourceTree = "<group>";
+		};
 		915BB6C42B671A3600A8B3F5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				915BB6C52B671A5B00A8B3F5 /* NetworkRouter.swift */,
-				915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */,
-				915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */,
+				914BCBB12B78FC39000DAC40 /* SendGrid */,
+				914BCBB02B78FC33000DAC40 /* Firebase */,
+				914BCBAF2B78FC2C000DAC40 /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -524,9 +551,9 @@
 				911D5E992B65C16100F30365 /* VerificationViewController.storyboard in Resources */,
 				91FF02AB2B61CF9A00EC438C /* Inter-Black.ttf in Resources */,
 				91FF02AE2B61CF9A00EC438C /* Inter-Regular.ttf in Resources */,
-				91439F8A2B6472080043B855 /* GoogleService-Info.plist in Resources */,
 				91FF02AC2B61CF9A00EC438C /* Inter-Light.ttf in Resources */,
 				91FF02AF2B61CF9A00EC438C /* Inter-Bold.ttf in Resources */,
+				9159C93E2B7251750011439B /* GoogleService-Info.plist in Resources */,
 				9189E74A2B6302C400E4EE78 /* SignUpViewController.storyboard in Resources */,
 				910886C62B5DAE5E006B1BF1 /* Assets.xcassets in Resources */,
 				910886C42B5DAE5D006B1BF1 /* Main.storyboard in Resources */,
@@ -685,6 +712,7 @@
 				9192A05B2B5FADE7007BF6A4 /* OnBoardingRouter.swift in Sources */,
 				915BB6CC2B67217100A8B3F5 /* VerificationResponse.swift in Sources */,
 				9189E7502B6329E000E4EE78 /* StringExtension.swift in Sources */,
+				914BCBB32B78FC7C000DAC40 /* SendGridManager.swift in Sources */,
 				9192A0572B5FADB4007BF6A4 /* OnBoardingPresenter.swift in Sources */,
 				911D5EA12B65C1C200F30365 /* VerificationControllerRouter.swift in Sources */,
 				915BB6CA2B671EBF00A8B3F5 /* NetworkManagerProtocol.swift in Sources */,

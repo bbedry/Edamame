@@ -9,6 +9,7 @@ target 'Edamame' do
    pod 'FirebaseAuth'
    pod 'SendGrid', :git => 'https://github.com/scottkawai/sendgrid-swift.git'
    pod 'Alamofire'
+   pod  'GoogleSignIn', '~> 6.0.0' 
 
   target 'EdamameTests' do
     inherit! :search_paths
