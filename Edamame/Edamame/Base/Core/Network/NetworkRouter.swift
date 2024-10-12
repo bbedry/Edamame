@@ -42,7 +42,7 @@ enum NetworkRouter: URLRequestConvertible {
         case .sendVerificationCode(let email):
            
             [
-                "personalizations":[["to": [["email": "bedridogn@gmail.com"]]]],
+                "personalizations":[["to": [["email": "\(email)"]]]],
                 "from": ["email": "beddoan@gmail.com"],
                 "subject": "Edamame Nutrition Verification Code",
                 "content":[["type":"text/plain", "value": otpCode]]

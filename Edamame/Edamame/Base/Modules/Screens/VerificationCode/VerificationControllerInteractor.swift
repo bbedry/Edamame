@@ -9,6 +9,7 @@ import Foundation
 
 protocol VerificationControllerInteractorProtocol {
     func sendVerificationCode(_ sendingEmail: String?)
+    func isValidateOTPCode(_ otpCode: String?)
 }
 
 fileprivate var verificationService: NetworkServiceProtocol = NetworkService()
@@ -22,13 +23,22 @@ final class VerificationControllerInteractor {
 }
 
 extension VerificationControllerInteractor: VerificationControllerInteractorProtocol {
+    func isValidateOTPCode(_ otpCode: String?) {
+        if self.otpCode != otpCode {
+            print("GIRDIGINIZ OTP CODE HATALIDIR!!!!")
+        }
+    }
+    
     func sendVerificationCode(_ sendingEmail: String?) {
                 
         sendGridManager.sendVerification(sendingEmail ?? "", self.otpCode ?? "")
+        print("MAIL ADRESINE GONDERILEN OTP CODE: \(self.otpCode)")
         sendGridManager.didSuccess = {
             
             }
         }
+    
+    
     }
 
 extension VerificationControllerInteractor {

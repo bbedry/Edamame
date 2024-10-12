@@ -15,4 +15,6 @@ class AppColors {
     static var secondryTextColor = UIColor.init(red: 159.0/255.0, green: 165.0/255.0, blue: 192.0/255.0, alpha: 1.0)
     static var outlineColor = UIColor.init(red: 208.0/255.0, green: 219.0/255.0, blue: 234.0/255.0, alpha: 1.0)
     static var formTextColor = UIColor.init(red: 244.0/255.0, green: 245.0/255.0, blue: 247.0/255.0, alpha: 1.0)
+    static var overlayLight = UIColor.init(red: 244.0/255.0, green: 244.0/255.0, blue: 244.0/255.0, alpha: 1.0)
+    static var blue01Dark = UIColor.init(red: 92.0/255.0, green: 157.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 }

@@ -27,7 +27,7 @@ final class RootRouter: Router, SendVerificationCodeRouter {
         case .loginModule:
             rootVC = loginModule
         case .homeModule:
-//            rootVC = homeModule
+            rootVC = homeModule
             
             print("home module")
         case .signUpModule:
@@ -68,7 +68,8 @@ final class RootRouter: Router, SendVerificationCodeRouter {
         let vc = rootController
         vc.handler = presenter
         
-        
+        interactor.signInOutput = presenter
+//        interactor.signUpOutPut = presenter
         router.rootVC = vc
         presenter.view = vc
         presenter.router = router
@@ -119,6 +120,24 @@ final class RootRouter: Router, SendVerificationCodeRouter {
         vc.sendingEmail = userData?.email
         
         return vc
+    }
+    
+    var homeModule: HomeViewController {
+        let presenter = HomeViewControllerPresenter()
+        let router = HomeViewControllerRouter()
+        let interactor = HomeViewControllerInteractor()
+        
+        let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+        let rootController = storyboard.instantiateInitialViewController() as! HomeViewController
+        
+        let vc = rootController
+        vc.handler = presenter
+        presenter.interactor = interactor
+        presenter.router = router
+        
+        
+        return vc
+        
     }
 
 }

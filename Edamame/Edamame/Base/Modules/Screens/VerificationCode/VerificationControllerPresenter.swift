@@ -13,14 +13,11 @@ protocol VerificationControllerPresenterProtocol: VerificationControllerHandler 
     var router: VerificationControllerRouter? { get set }
 }
 final class VerificationControllerPresenter: VerificationControllerPresenterProtocol {
-   
-    
+ 
     weak var view: VerificationControllerProtocol?
     var interactor: VerificationControllerInteractorProtocol?
     var router: VerificationControllerRouter?
  
-    
-  
 }
 
 extension VerificationControllerPresenter {
@@ -29,7 +26,7 @@ extension VerificationControllerPresenter {
         interactor?.sendVerificationCode(sendingEmail)
     }
     
-    func sendVerificationCode(_ sendingEmail: String?) {
-        interactor?.sendVerificationCode(sendingEmail)
+    func isValidateOTPCode(_ otpCode: String?) {
+        interactor?.isValidateOTPCode(otpCode)
     }
 }

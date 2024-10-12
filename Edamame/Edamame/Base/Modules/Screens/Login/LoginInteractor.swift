@@ -16,11 +16,17 @@ protocol LoginInteractorProtocol {
     func login(email: String?, password: String?) throws
 //    func loginWithGoogle(_ email: String?,_ password: String?) throws
 }
+protocol SıgnInLoginInteractorOutputProtocol: AnyObject {
+    func signInSuccess(user: UserDataResponse)
+    func signInError(error: Error)
+}
+
 
 fileprivate var firebaseManager = FirebaseManager()
 
-class LoginInteractor {
-    weak var outPut: SignUpInteractorOutputProtocol?
+final class LoginInteractor {
+    weak var signUpOutPut: SignUpInteractorOutputProtocol?
+    weak var signInOutput: SıgnInLoginInteractorOutputProtocol?
 }
 
 extension LoginInteractor: LoginInteractorProtocol {
@@ -65,8 +71,11 @@ extension LoginInteractor: LoginInteractorProtocol {
         firebaseManager.signIn(email: email, password: pass) { result in
             switch result {
             case .success(let user):
-                print(user)
+                guard let userData = user else { return }
+                self.signInOutput?.signInSuccess(user: UserDataResponse(uid: userData.user.uid, email: userData.user.email))
             case .failure(let error):
+                self.signInOutput?.signInError(error: error)
+//                self.outPut?.signUpResultError(result: error)
                 print("\(error)")
             }
         }

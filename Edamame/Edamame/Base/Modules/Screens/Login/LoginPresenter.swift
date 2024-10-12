@@ -15,6 +15,7 @@ protocol LoginPresenterProtocol: LoginViewHandler {
 
 
 class LoginPresenter: LoginPresenterProtocol {
+//    var signInOutput: SıgnInLoginInteractorOutputProtocol?
     
     var view: LoginViewProtocol?
     var interactor: LoginInteractorProtocol?
@@ -75,4 +76,16 @@ extension LoginPresenter {
     func presentSignUpController() {
         router?.showScreen(type: .signUpController)
     }
+}
+
+extension LoginPresenter: SıgnInLoginInteractorOutputProtocol {
+    func signInSuccess(user: UserDataResponse) {
+        router?.showScreen(type: .homeModule)
+    }
+    
+    func signInError(error: Error) {
+        print(error)
+    }
+    
+    
 }

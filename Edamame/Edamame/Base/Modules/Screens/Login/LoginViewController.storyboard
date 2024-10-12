@@ -77,14 +77,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="E9S-yE-0od" firstAttribute="top" secondItem="SNO-xm-Pjj" secondAttribute="top" id="4Tc-HH-ZdJ"/>
                                                     <constraint firstItem="E9S-yE-0od" firstAttribute="top" secondItem="SNO-xm-Pjj" secondAttribute="top" id="7PF-kM-G0Y"/>
                                                     <constraint firstAttribute="trailing" secondItem="E9S-yE-0od" secondAttribute="trailing" constant="16" id="7nk-KB-UWt"/>
-                                                    <constraint firstItem="E9S-yE-0od" firstAttribute="leading" secondItem="SNO-xm-Pjj" secondAttribute="leading" constant="16" id="Gpw-dh-vAM"/>
                                                     <constraint firstItem="E9S-yE-0od" firstAttribute="leading" secondItem="SNO-xm-Pjj" secondAttribute="leading" constant="16" id="OAG-Ky-CoQ"/>
                                                     <constraint firstAttribute="height" constant="56" id="Y4y-xM-Fcn"/>
-                                                    <constraint firstAttribute="bottom" secondItem="E9S-yE-0od" secondAttribute="bottom" id="baV-7F-KDk"/>
-                                                    <constraint firstAttribute="trailing" secondItem="E9S-yE-0od" secondAttribute="trailing" constant="16" id="lDB-X8-YXC"/>
                                                     <constraint firstAttribute="bottom" secondItem="E9S-yE-0od" secondAttribute="bottom" id="vtU-s5-okf"/>
                                                 </constraints>
                                             </view>

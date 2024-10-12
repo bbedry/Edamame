@@ -25,12 +25,12 @@ class FirebaseManager {
         }
     }
 
-    func signIn(email: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func signIn(email: String, password: String, completion: @escaping (Result<AuthDataResult?, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
             if let error = error {
                 completion(.failure(error))
             } else {
-                completion(.success("Sign-in successful!"))
+                completion(.success(authResult))
             }
         }
     }
