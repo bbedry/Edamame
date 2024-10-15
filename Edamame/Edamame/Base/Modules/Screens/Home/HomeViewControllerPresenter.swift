@@ -20,4 +20,10 @@ class HomeViewControllerPresenter:  HomePresenterProtocol {
     var router: HomeViewControllerRouter?
     
     
+    init(view: HomeViewProtocol?, router: HomeViewControllerRouter?, interactor: HomeViewControllerInteractor?) {
+        self.view = view
+        self.router = router
+        self.interactor = interactor
+    }
+    
 }

@@ -17,4 +17,14 @@ class AppColors {
     static var formTextColor = UIColor.init(red: 244.0/255.0, green: 245.0/255.0, blue: 247.0/255.0, alpha: 1.0)
     static var overlayLight = UIColor.init(red: 244.0/255.0, green: 244.0/255.0, blue: 244.0/255.0, alpha: 1.0)
     static var blue01Dark = UIColor.init(red: 92.0/255.0, green: 157.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+    static var light = UIColor.init(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+    static var primaryLight = UIColor.init(red: 17.0/255.0, green: 17.0/255.0, blue: 17.0/255.0, alpha: 1.0)
+}
+
+class AppFont {
+    static let interBold24 = UIFont(name: "Inter-Bold", size: 24)
+    static let interLight24 = UIFont(name: "Inter-Light", size: 16)
+    static let interMedium24 = UIFont(name: "Inter-Medium", size: 16)
+    static let interRegular24 = UIFont(name: "Inter-Regular", size: 16)
+    static let interSemiBold24 = UIFont(name: "Inter-SemiBold", size: 16)
 }

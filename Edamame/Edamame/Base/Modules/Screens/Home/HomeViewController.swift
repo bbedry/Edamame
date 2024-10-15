@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
     }
 
 

@@ -270,10 +270,10 @@
             filePath = "Edamame/App/RootRouter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "homeModule"
-            landmarkType = "24">
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "RootRouter"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "9DB9966C-D8AD-4CFB-8303-5AD0C4CAE95E - cc816f86c538be1d"
@@ -318,10 +318,10 @@
             filePath = "Edamame/App/RootRouter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "homeModule"
-            landmarkType = "24">
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "RootRouter"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "8251BA5B-D35C-4826-B143-9EA509F8B043 - cc816f86c538be7e"
@@ -366,10 +366,26 @@
             filePath = "Edamame/App/RootRouter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "homeModule"
-            landmarkType = "24">
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "RootRouter"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F072A6A7-BCE2-406F-BB0E-FA3218DC9936"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edamame/Base/Modules/NavigationBuilder/NavigationBuilder.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "NavigationBuilder"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -55,6 +55,23 @@
 		9192A0572B5FADB4007BF6A4 /* OnBoardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192A0562B5FADB4007BF6A4 /* OnBoardingPresenter.swift */; };
 		9192A05B2B5FADE7007BF6A4 /* OnBoardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192A05A2B5FADE7007BF6A4 /* OnBoardingRouter.swift */; };
 		9192A05D2B5FADFD007BF6A4 /* OnBoardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9192A05C2B5FADFD007BF6A4 /* OnBoardingViewController.storyboard */; };
+		91F8094E2CBBB63B00A4F003 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8094D2CBBB63B00A4F003 /* TabBarRouter.swift */; };
+		91F809502CBBB66000A4F003 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8094F2CBBB66000A4F003 /* BaseTabbarController.swift */; };
+		91F809522CBBB69800A4F003 /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809512CBBB69800A4F003 /* TabBarBuilder.swift */; };
+		91F809552CBBBB9B00A4F003 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809542CBBBB9B00A4F003 /* NavigationBuilder.swift */; };
+		91F809572CBBBC5300A4F003 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809562CBBBC5300A4F003 /* HomeBuilder.swift */; };
+		91F8095A2CBBBEE300A4F003 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809592CBBBEE300A4F003 /* ScanViewController.swift */; };
+		91F8095C2CBBBEF900A4F003 /* ScanViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8095B2CBBBEF900A4F003 /* ScanViewControllerPresenter.swift */; };
+		91F8095E2CBBBF0400A4F003 /* ScanViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8095D2CBBBF0400A4F003 /* ScanViewControllerInteractor.swift */; };
+		91F809602CBBBF0E00A4F003 /* ScanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8095F2CBBBF0E00A4F003 /* ScanRouter.swift */; };
+		91F809622CBBBF1E00A4F003 /* ScanViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F809612CBBBF1E00A4F003 /* ScanViewController.storyboard */; };
+		91F809652CBBDD6500A4F003 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809642CBBDD6500A4F003 /* ProfileViewController.swift */; };
+		91F809672CBBDD7200A4F003 /* ProfileViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809662CBBDD7200A4F003 /* ProfileViewControllerPresenter.swift */; };
+		91F809692CBBDD7C00A4F003 /* ProfileViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809682CBBDD7C00A4F003 /* ProfileViewControllerInteractor.swift */; };
+		91F8096B2CBBDD8B00A4F003 /* ProfileViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8096A2CBBDD8B00A4F003 /* ProfileViewControllerRouter.swift */; };
+		91F8096D2CBBDD9B00A4F003 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F8096C2CBBDD9B00A4F003 /* ProfileViewController.storyboard */; };
+		91F809712CBBDDD600A4F003 /* ProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809702CBBDDD600A4F003 /* ProfileBuilder.swift */; };
+		91F809732CBBDDE100A4F003 /* ScanBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F809722CBBDDE100A4F003 /* ScanBuilder.swift */; };
 		91FF02A72B61CF9A00EC438C /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91FF029E2B61CF9A00EC438C /* Inter-Thin.ttf */; };
 		91FF02A82B61CF9A00EC438C /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91FF029F2B61CF9A00EC438C /* Inter-ExtraLight.ttf */; };
 		91FF02A92B61CF9A00EC438C /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91FF02A02B61CF9A00EC438C /* Inter-Medium.ttf */; };
@@ -144,6 +161,23 @@
 		9192A0562B5FADB4007BF6A4 /* OnBoardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPresenter.swift; sourceTree = "<group>"; };
 		9192A05A2B5FADE7007BF6A4 /* OnBoardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingRouter.swift; sourceTree = "<group>"; };
 		9192A05C2B5FADFD007BF6A4 /* OnBoardingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoardingViewController.storyboard; sourceTree = "<group>"; };
+		91F8094D2CBBB63B00A4F003 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		91F8094F2CBBB66000A4F003 /* BaseTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
+		91F809512CBBB69800A4F003 /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		91F809542CBBBB9B00A4F003 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
+		91F809562CBBBC5300A4F003 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		91F809592CBBBEE300A4F003 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		91F8095B2CBBBEF900A4F003 /* ScanViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewControllerPresenter.swift; sourceTree = "<group>"; };
+		91F8095D2CBBBF0400A4F003 /* ScanViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewControllerInteractor.swift; sourceTree = "<group>"; };
+		91F8095F2CBBBF0E00A4F003 /* ScanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanRouter.swift; sourceTree = "<group>"; };
+		91F809612CBBBF1E00A4F003 /* ScanViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScanViewController.storyboard; sourceTree = "<group>"; };
+		91F809642CBBDD6500A4F003 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		91F809662CBBDD7200A4F003 /* ProfileViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerPresenter.swift; sourceTree = "<group>"; };
+		91F809682CBBDD7C00A4F003 /* ProfileViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerInteractor.swift; sourceTree = "<group>"; };
+		91F8096A2CBBDD8B00A4F003 /* ProfileViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerRouter.swift; sourceTree = "<group>"; };
+		91F8096C2CBBDD9B00A4F003 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		91F809702CBBDDD600A4F003 /* ProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBuilder.swift; sourceTree = "<group>"; };
+		91F809722CBBDDE100A4F003 /* ScanBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanBuilder.swift; sourceTree = "<group>"; };
 		91FF029E2B61CF9A00EC438C /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
 		91FF029F2B61CF9A00EC438C /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
 		91FF02A02B61CF9A00EC438C /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
@@ -289,6 +323,8 @@
 		910886F22B5DCB8E006B1BF1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				91F809532CBBBB8A00A4F003 /* NavigationBuilder */,
+				91F8094C2CBBB61700A4F003 /* TabBar */,
 				910886F32B5DCBAA006B1BF1 /* Screens */,
 			);
 			path = Modules;
@@ -297,6 +333,8 @@
 		910886F32B5DCBAA006B1BF1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				91F809632CBBDD5400A4F003 /* Profile */,
+				91F809582CBBBED200A4F003 /* Scan */,
 				917FD2B32CBB1BF800A2F444 /* Home */,
 				911D5E972B65C14400F30365 /* VerificationCode */,
 				9189E7422B62FE2B00E4EE78 /* SignUp */,
@@ -383,6 +421,7 @@
 				917FD2BA2CBB23C000A2F444 /* HomeViewControllerRouter.swift */,
 				917FD2BC2CBB23DF00A2F444 /* HomeViewControllerInteractor.swift */,
 				917FD2BE2CBB2A6F00A2F444 /* HomeViewController.storyboard */,
+				91F809562CBBBC5300A4F003 /* HomeBuilder.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -417,6 +456,50 @@
 				9192A05C2B5FADFD007BF6A4 /* OnBoardingViewController.storyboard */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		91F8094C2CBBB61700A4F003 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				91F8094D2CBBB63B00A4F003 /* TabBarRouter.swift */,
+				91F8094F2CBBB66000A4F003 /* BaseTabbarController.swift */,
+				91F809512CBBB69800A4F003 /* TabBarBuilder.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		91F809532CBBBB8A00A4F003 /* NavigationBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				91F809542CBBBB9B00A4F003 /* NavigationBuilder.swift */,
+			);
+			path = NavigationBuilder;
+			sourceTree = "<group>";
+		};
+		91F809582CBBBED200A4F003 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				91F809592CBBBEE300A4F003 /* ScanViewController.swift */,
+				91F8095B2CBBBEF900A4F003 /* ScanViewControllerPresenter.swift */,
+				91F8095D2CBBBF0400A4F003 /* ScanViewControllerInteractor.swift */,
+				91F8095F2CBBBF0E00A4F003 /* ScanRouter.swift */,
+				91F809612CBBBF1E00A4F003 /* ScanViewController.storyboard */,
+				91F809722CBBDDE100A4F003 /* ScanBuilder.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		91F809632CBBDD5400A4F003 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				91F809642CBBDD6500A4F003 /* ProfileViewController.swift */,
+				91F809662CBBDD7200A4F003 /* ProfileViewControllerPresenter.swift */,
+				91F809682CBBDD7C00A4F003 /* ProfileViewControllerInteractor.swift */,
+				91F8096A2CBBDD8B00A4F003 /* ProfileViewControllerRouter.swift */,
+				91F8096C2CBBDD9B00A4F003 /* ProfileViewController.storyboard */,
+				91F809702CBBDDD600A4F003 /* ProfileBuilder.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		91FF029C2B61CF7400EC438C /* Resources */ = {
@@ -569,6 +652,7 @@
 				91FF02A72B61CF9A00EC438C /* Inter-Thin.ttf in Resources */,
 				91FF02AA2B61CF9A00EC438C /* Inter-SemiBold.ttf in Resources */,
 				91FF02A82B61CF9A00EC438C /* Inter-ExtraLight.ttf in Resources */,
+				91F809622CBBBF1E00A4F003 /* ScanViewController.storyboard in Resources */,
 				91FF02A92B61CF9A00EC438C /* Inter-Medium.ttf in Resources */,
 				910886FE2B5DCC26006B1BF1 /* LoginViewController.storyboard in Resources */,
 				911D5E992B65C16100F30365 /* VerificationViewController.storyboard in Resources */,
@@ -581,6 +665,7 @@
 				917FD2BF2CBB2A6F00A2F444 /* HomeViewController.storyboard in Resources */,
 				910886C62B5DAE5E006B1BF1 /* Assets.xcassets in Resources */,
 				910886C42B5DAE5D006B1BF1 /* Main.storyboard in Resources */,
+				91F8096D2CBBDD9B00A4F003 /* ProfileViewController.storyboard in Resources */,
 				91FF02AD2B61CF9A00EC438C /* Inter-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,38 +798,53 @@
 				910886F82B5DCBFE006B1BF1 /* LoginPresenter.swift in Sources */,
 				9189E7522B6329EC00E4EE78 /* Regex.swift in Sources */,
 				910886F12B5DCB1B006B1BF1 /* Router.swift in Sources */,
+				91F8095E2CBBBF0400A4F003 /* ScanViewControllerInteractor.swift in Sources */,
 				911D5E9D2B65C1A500F30365 /* VerificationControllerPresenter.swift in Sources */,
 				91FF02B22B61E51700EC438C /* UIViewExtension.swift in Sources */,
 				91188EDA2B647CA800C5749B /* FirebaseManager.swift in Sources */,
+				91F8094E2CBBB63B00A4F003 /* TabBarRouter.swift in Sources */,
 				91439F882B64108E0043B855 /* ConsValidataion.swift in Sources */,
+				91F809552CBBBB9B00A4F003 /* NavigationBuilder.swift in Sources */,
+				91F809712CBBDDD600A4F003 /* ProfileBuilder.swift in Sources */,
 				9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */,
 				917FD2BB2CBB23C000A2F444 /* HomeViewControllerRouter.swift in Sources */,
 				9189E7482B63027700E4EE78 /* SignUpRouter.swift in Sources */,
 				9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */,
+				91F809732CBBDDE100A4F003 /* ScanBuilder.swift in Sources */,
 				911D5E962B65A3F500F30365 /* UserDataResponse.swift in Sources */,
+				91F809602CBBBF0E00A4F003 /* ScanRouter.swift in Sources */,
 				910886FA2B5DCC08006B1BF1 /* LoginInteractor.swift in Sources */,
 				910886BD2B5DAE5D006B1BF1 /* AppDelegate.swift in Sources */,
 				915BB6C62B671A5B00A8B3F5 /* NetworkRouter.swift in Sources */,
 				915BB6C82B671EA200A8B3F5 /* NetworkManager.swift in Sources */,
 				910887002B5DCC78006B1BF1 /* LoginViewController.swift in Sources */,
 				9189E74E2B6323B500E4EE78 /* ErrorHandling.swift in Sources */,
+				91F8096B2CBBDD8B00A4F003 /* ProfileViewControllerRouter.swift in Sources */,
+				91F809522CBBB69800A4F003 /* TabBarBuilder.swift in Sources */,
 				910886EF2B5DCB12006B1BF1 /* RootRouter.swift in Sources */,
 				9189E7442B63022F00E4EE78 /* SignUpViewController.swift in Sources */,
+				91F8095C2CBBBEF900A4F003 /* ScanViewControllerPresenter.swift in Sources */,
 				911D5E9F2B65C1B100F30365 /* VerificationControllerInteractor.swift in Sources */,
 				9192A0552B5FAD99007BF6A4 /* OnBoardingViewController.swift in Sources */,
 				91FF02B42B61E54600EC438C /* CodableExtension.swift in Sources */,
 				917FD2B92CBB23A700A2F444 /* HomeViewControllerPresenter.swift in Sources */,
 				911D5E9B2B65C18C00F30365 /* VerificationViewController.swift in Sources */,
+				91F8095A2CBBBEE300A4F003 /* ScanViewController.swift in Sources */,
 				910886FC2B5DCC17006B1BF1 /* LoginRouter.swift in Sources */,
+				91F809502CBBB66000A4F003 /* BaseTabbarController.swift in Sources */,
 				9192A05B2B5FADE7007BF6A4 /* OnBoardingRouter.swift in Sources */,
 				915BB6CC2B67217100A8B3F5 /* VerificationResponse.swift in Sources */,
 				9189E7502B6329E000E4EE78 /* StringExtension.swift in Sources */,
+				91F809652CBBDD6500A4F003 /* ProfileViewController.swift in Sources */,
 				914BCBB32B78FC7C000DAC40 /* SendGridManager.swift in Sources */,
+				91F809672CBBDD7200A4F003 /* ProfileViewControllerPresenter.swift in Sources */,
 				9192A0572B5FADB4007BF6A4 /* OnBoardingPresenter.swift in Sources */,
 				917FD2B62CBB1C0D00A2F444 /* HomeViewController.swift in Sources */,
+				91F809692CBBDD7C00A4F003 /* ProfileViewControllerInteractor.swift in Sources */,
 				911D5EA12B65C1C200F30365 /* VerificationControllerRouter.swift in Sources */,
 				915BB6CA2B671EBF00A8B3F5 /* NetworkManagerProtocol.swift in Sources */,
 				9189E74C2B631CFD00E4EE78 /* SignUpInteractor.swift in Sources */,
+				91F809572CBBBC5300A4F003 /* HomeBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

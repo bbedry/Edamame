@@ -10,7 +10,7 @@ import UIKit
 
 
 
-final class RootRouter: Router, SendVerificationCodeRouter {
+final class RootRouter: Router {
   
     
     var rootVC: UIViewController?
@@ -122,26 +122,39 @@ final class RootRouter: Router, SendVerificationCodeRouter {
         return vc
     }
     
-    var homeModule: HomeViewController {
-        let presenter = HomeViewControllerPresenter()
-        let router = HomeViewControllerRouter()
-        let interactor = HomeViewControllerInteractor()
+    var homeModule: UITabBarController {
+        let submodules = (
+            home: HomeBuilder.build(usingNavigationFactory: NavigationBuilder.build),
+            scan: ScanBuilder.build(usingNavigationFactory: NavigationBuilder.build),
+            profile : ProfileBuilder.build(usingNavigationFactory: NavigationBuilder.build)
+            
         
-        let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-        let rootController = storyboard.instantiateInitialViewController() as! HomeViewController
+        )
         
-        let vc = rootController
-        vc.handler = presenter
-        presenter.interactor = interactor
-        presenter.router = router
+        let tabBarController = TabBarBuilder.build(submodules: submodules)
         
-        
-        return vc
-        
+        return tabBarController
     }
+//    var homeModule: HomeViewController {
+//        let presenter = HomeViewControllerPresenter()
+//        let router = HomeViewControllerRouter()
+//        let interactor = HomeViewControllerInteractor()
+//        
+//        let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+//        let rootController = storyboard.instantiateInitialViewController() as! HomeViewController
+//        
+//        let vc = rootController
+//        vc.handler = presenter
+//        presenter.interactor = interactor
+//        presenter.router = router
+//        
+//        
+//        return vc
+//        
+//    }
 
 }
-extension RootRouter {
+extension RootRouter: SendVerificationCodeRouter{
     func passUserDataToVerification(_ userData: UserDataResponse?) {
         
         self.userData = userData
