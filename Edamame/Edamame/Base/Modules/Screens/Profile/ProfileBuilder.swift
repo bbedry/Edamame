@@ -14,7 +14,7 @@ class ProfileBuilder {
         let view = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         let interactor = ProfileViewControllerInteractor()
         let presenter = ProfileViewControllerPresenter(interactor: interactor, router: router, view: view)
-        
+        view.title = "Profile"
         view.handler = presenter
         
         return factory(view)

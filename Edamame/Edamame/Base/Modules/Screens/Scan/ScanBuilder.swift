@@ -14,7 +14,7 @@ class ScanBuilder {
         let view = storyboard.instantiateViewController(withIdentifier: "ScanViewController") as! ScanViewController
         let interactor = ScanViewControllerInteractor()
         let presenter = ScanViewControllerPresenter(view: view, router: router, interactor: interactor)
-        
+        view.title = "Scan Food"
         view.handler = presenter
         
         return factory(view)

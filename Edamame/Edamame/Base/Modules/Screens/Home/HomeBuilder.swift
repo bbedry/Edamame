@@ -14,7 +14,7 @@ class HomeBuilder {
         let view = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         let interactor = HomeViewControllerInteractor()
         let presenter = HomeViewControllerPresenter(view: view, router: router, interactor: interactor)
-        
+        view.title = "Home"
         view.handler = presenter
         
         return factory(view)
