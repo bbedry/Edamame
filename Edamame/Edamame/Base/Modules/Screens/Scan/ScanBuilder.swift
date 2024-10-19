@@ -16,6 +16,7 @@ class ScanBuilder {
         let presenter = ScanViewControllerPresenter(view: view, router: router, interactor: interactor)
         view.title = "Scan Food"
         view.handler = presenter
+        view.setNavigationLeftButton()
         
         return factory(view)
     }

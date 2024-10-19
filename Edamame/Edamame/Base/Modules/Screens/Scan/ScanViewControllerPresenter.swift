@@ -15,6 +15,7 @@ protocol ScanControllerPresenterProtocol: ScanControllerHandler {
 }
 
 class ScanViewControllerPresenter: ScanControllerPresenterProtocol {
+  
 
     var view: ScanControllerProtocol?
     
@@ -28,5 +29,12 @@ class ScanViewControllerPresenter: ScanControllerPresenterProtocol {
         self.interactor = interactor
     }
     
+    
+}
+
+extension ScanViewControllerPresenter {
+    func showCamera(on view: UIView) {
+        interactor?.startCameraSession(on: view)
+    }
     
 }

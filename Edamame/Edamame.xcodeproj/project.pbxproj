@@ -30,6 +30,7 @@
 		911D5E9D2B65C1A500F30365 /* VerificationControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D5E9C2B65C1A500F30365 /* VerificationControllerPresenter.swift */; };
 		911D5E9F2B65C1B100F30365 /* VerificationControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D5E9E2B65C1B100F30365 /* VerificationControllerInteractor.swift */; };
 		911D5EA12B65C1C200F30365 /* VerificationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */; };
+		912EFA632CC059EE00BB0B03 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EFA622CC059EE00BB0B03 /* BaseViewController.swift */; };
 		91439F882B64108E0043B855 /* ConsValidataion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91439F872B64108E0043B855 /* ConsValidataion.swift */; };
 		914BCBB32B78FC7C000DAC40 /* SendGridManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BCBB22B78FC7C000DAC40 /* SendGridManager.swift */; };
 		9159C93E2B7251750011439B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9159C93D2B7251750011439B /* GoogleService-Info.plist */; };
@@ -136,6 +137,7 @@
 		911D5E9C2B65C1A500F30365 /* VerificationControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationControllerPresenter.swift; sourceTree = "<group>"; };
 		911D5E9E2B65C1B100F30365 /* VerificationControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationControllerInteractor.swift; sourceTree = "<group>"; };
 		911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationControllerRouter.swift; sourceTree = "<group>"; };
+		912EFA622CC059EE00BB0B03 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		91439F872B64108E0043B855 /* ConsValidataion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsValidataion.swift; sourceTree = "<group>"; };
 		914BCBB22B78FC7C000DAC40 /* SendGridManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendGridManager.swift; sourceTree = "<group>"; };
 		9159C93D2B7251750011439B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 		910886F22B5DCB8E006B1BF1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				912EFA612CC059D900BB0B03 /* BaseViewController */,
 				91F809532CBBBB8A00A4F003 /* NavigationBuilder */,
 				91F8094C2CBBB61700A4F003 /* TabBar */,
 				910886F32B5DCBAA006B1BF1 /* Screens */,
@@ -375,6 +378,14 @@
 				911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */,
 			);
 			path = VerificationCode;
+			sourceTree = "<group>";
+		};
+		912EFA612CC059D900BB0B03 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				912EFA622CC059EE00BB0B03 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		914BCBAF2B78FC2C000DAC40 /* Network */ = {
@@ -807,6 +818,7 @@
 				91F809552CBBBB9B00A4F003 /* NavigationBuilder.swift in Sources */,
 				91F809712CBBDDD600A4F003 /* ProfileBuilder.swift in Sources */,
 				9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */,
+				912EFA632CC059EE00BB0B03 /* BaseViewController.swift in Sources */,
 				917FD2BB2CBB23C000A2F444 /* HomeViewControllerRouter.swift in Sources */,
 				9189E7482B63027700E4EE78 /* SignUpRouter.swift in Sources */,
 				9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */,
@@ -1020,11 +1032,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XZCMJSHQ4A;
+				DEVELOPMENT_TEAM = 3YPP74CF66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Edamame/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application needs permission usage camera for scan food. ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1036,8 +1050,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BedriDogan.Edamame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BedriDogan.edamame.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1053,11 +1068,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XZCMJSHQ4A;
+				DEVELOPMENT_TEAM = 3YPP74CF66;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Edamame/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application needs permission usage camera for scan food. ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1069,8 +1086,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BedriDogan.Edamame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BedriDogan.edamame.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

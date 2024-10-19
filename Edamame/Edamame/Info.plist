@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleURLTypes</key>
-	<array></array>
+	<array/>
 	<key>GID</key>
 	<string></string>
 	<key>NSAppTransportSecurity</key>
