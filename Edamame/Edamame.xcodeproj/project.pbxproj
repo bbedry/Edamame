@@ -31,6 +31,10 @@
 		911D5E9F2B65C1B100F30365 /* VerificationControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D5E9E2B65C1B100F30365 /* VerificationControllerInteractor.swift */; };
 		911D5EA12B65C1C200F30365 /* VerificationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */; };
 		912EFA632CC059EE00BB0B03 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912EFA622CC059EE00BB0B03 /* BaseViewController.swift */; };
+		913878092CC6E47F0066EBBE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913878082CC6E47F0066EBBE /* CameraViewController.swift */; };
+		9138780C2CC6F3B60066EBBE /* CameraViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138780B2CC6F3B60066EBBE /* CameraViewInteractor.swift */; };
+		9138780E2CC6F3DB0066EBBE /* CameraViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138780D2CC6F3DB0066EBBE /* CameraViewPresenter.swift */; };
+		913878102CC6FA770066EBBE /* CameraViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138780F2CC6FA770066EBBE /* CameraViewRouter.swift */; };
 		91439F882B64108E0043B855 /* ConsValidataion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91439F872B64108E0043B855 /* ConsValidataion.swift */; };
 		914BCBB32B78FC7C000DAC40 /* SendGridManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914BCBB22B78FC7C000DAC40 /* SendGridManager.swift */; };
 		9159C93E2B7251750011439B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9159C93D2B7251750011439B /* GoogleService-Info.plist */; };
@@ -38,6 +42,7 @@
 		915BB6C82B671EA200A8B3F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */; };
 		915BB6CA2B671EBF00A8B3F5 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */; };
 		915BB6CC2B67217100A8B3F5 /* VerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915BB6CB2B67217100A8B3F5 /* VerificationResponse.swift */; };
+		916422302CE01E3400919985 /* RectangleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9164222F2CE01E3400919985 /* RectangleOverlayView.swift */; };
 		917FD2B62CBB1C0D00A2F444 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917FD2B42CBB1C0D00A2F444 /* HomeViewController.swift */; };
 		917FD2B92CBB23A700A2F444 /* HomeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917FD2B82CBB23A700A2F444 /* HomeViewControllerPresenter.swift */; };
 		917FD2BB2CBB23C000A2F444 /* HomeViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917FD2BA2CBB23C000A2F444 /* HomeViewControllerRouter.swift */; };
@@ -138,6 +143,10 @@
 		911D5E9E2B65C1B100F30365 /* VerificationControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationControllerInteractor.swift; sourceTree = "<group>"; };
 		911D5EA02B65C1C200F30365 /* VerificationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationControllerRouter.swift; sourceTree = "<group>"; };
 		912EFA622CC059EE00BB0B03 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		913878082CC6E47F0066EBBE /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		9138780B2CC6F3B60066EBBE /* CameraViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewInteractor.swift; sourceTree = "<group>"; };
+		9138780D2CC6F3DB0066EBBE /* CameraViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewPresenter.swift; sourceTree = "<group>"; };
+		9138780F2CC6FA770066EBBE /* CameraViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewRouter.swift; sourceTree = "<group>"; };
 		91439F872B64108E0043B855 /* ConsValidataion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsValidataion.swift; sourceTree = "<group>"; };
 		914BCBB22B78FC7C000DAC40 /* SendGridManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendGridManager.swift; sourceTree = "<group>"; };
 		9159C93D2B7251750011439B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -145,6 +154,7 @@
 		915BB6C72B671EA200A8B3F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		915BB6C92B671EBF00A8B3F5 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		915BB6CB2B67217100A8B3F5 /* VerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationResponse.swift; sourceTree = "<group>"; };
+		9164222F2CE01E3400919985 /* RectangleOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleOverlayView.swift; sourceTree = "<group>"; };
 		917FD2B42CBB1C0D00A2F444 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		917FD2B82CBB23A700A2F444 /* HomeViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerPresenter.swift; sourceTree = "<group>"; };
 		917FD2BA2CBB23C000A2F444 /* HomeViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerRouter.swift; sourceTree = "<group>"; };
@@ -388,6 +398,17 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		9138780A2CC6F3850066EBBE /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				913878082CC6E47F0066EBBE /* CameraViewController.swift */,
+				9138780B2CC6F3B60066EBBE /* CameraViewInteractor.swift */,
+				9138780D2CC6F3DB0066EBBE /* CameraViewPresenter.swift */,
+				9138780F2CC6FA770066EBBE /* CameraViewRouter.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
 		914BCBAF2B78FC2C000DAC40 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +443,14 @@
 				914BCBAF2B78FC2C000DAC40 /* Network */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		9164222E2CE01DF600919985 /* RectangleOverlayView */ = {
+			isa = PBXGroup;
+			children = (
+				9164222F2CE01E3400919985 /* RectangleOverlayView.swift */,
+			);
+			path = RectangleOverlayView;
 			sourceTree = "<group>";
 		};
 		917FD2B32CBB1BF800A2F444 /* Home */ = {
@@ -490,6 +519,8 @@
 		91F809582CBBBED200A4F003 /* Scan */ = {
 			isa = PBXGroup;
 			children = (
+				9164222E2CE01DF600919985 /* RectangleOverlayView */,
+				9138780A2CC6F3850066EBBE /* CameraView */,
 				91F809592CBBBEE300A4F003 /* ScanViewController.swift */,
 				91F8095B2CBBBEF900A4F003 /* ScanViewControllerPresenter.swift */,
 				91F8095D2CBBBF0400A4F003 /* ScanViewControllerInteractor.swift */,
@@ -819,6 +850,7 @@
 				91F809712CBBDDD600A4F003 /* ProfileBuilder.swift in Sources */,
 				9189E7462B63026200E4EE78 /* SignUpPresenter.swift in Sources */,
 				912EFA632CC059EE00BB0B03 /* BaseViewController.swift in Sources */,
+				913878102CC6FA770066EBBE /* CameraViewRouter.swift in Sources */,
 				917FD2BB2CBB23C000A2F444 /* HomeViewControllerRouter.swift in Sources */,
 				9189E7482B63027700E4EE78 /* SignUpRouter.swift in Sources */,
 				9189E7412B62F56B00E4EE78 /* AppColors.swift in Sources */,
@@ -837,13 +869,16 @@
 				9189E7442B63022F00E4EE78 /* SignUpViewController.swift in Sources */,
 				91F8095C2CBBBEF900A4F003 /* ScanViewControllerPresenter.swift in Sources */,
 				911D5E9F2B65C1B100F30365 /* VerificationControllerInteractor.swift in Sources */,
+				9138780C2CC6F3B60066EBBE /* CameraViewInteractor.swift in Sources */,
 				9192A0552B5FAD99007BF6A4 /* OnBoardingViewController.swift in Sources */,
 				91FF02B42B61E54600EC438C /* CodableExtension.swift in Sources */,
+				916422302CE01E3400919985 /* RectangleOverlayView.swift in Sources */,
 				917FD2B92CBB23A700A2F444 /* HomeViewControllerPresenter.swift in Sources */,
 				911D5E9B2B65C18C00F30365 /* VerificationViewController.swift in Sources */,
 				91F8095A2CBBBEE300A4F003 /* ScanViewController.swift in Sources */,
 				910886FC2B5DCC17006B1BF1 /* LoginRouter.swift in Sources */,
 				91F809502CBBB66000A4F003 /* BaseTabbarController.swift in Sources */,
+				913878092CC6E47F0066EBBE /* CameraViewController.swift in Sources */,
 				9192A05B2B5FADE7007BF6A4 /* OnBoardingRouter.swift in Sources */,
 				915BB6CC2B67217100A8B3F5 /* VerificationResponse.swift in Sources */,
 				9189E7502B6329E000E4EE78 /* StringExtension.swift in Sources */,
@@ -852,6 +887,7 @@
 				91F809672CBBDD7200A4F003 /* ProfileViewControllerPresenter.swift in Sources */,
 				9192A0572B5FADB4007BF6A4 /* OnBoardingPresenter.swift in Sources */,
 				917FD2B62CBB1C0D00A2F444 /* HomeViewController.swift in Sources */,
+				9138780E2CC6F3DB0066EBBE /* CameraViewPresenter.swift in Sources */,
 				91F809692CBBDD7C00A4F003 /* ProfileViewControllerInteractor.swift in Sources */,
 				911D5EA12B65C1C200F30365 /* VerificationControllerRouter.swift in Sources */,
 				915BB6CA2B671EBF00A8B3F5 /* NetworkManagerProtocol.swift in Sources */,
@@ -1035,7 +1071,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3YPP74CF66;
+				DEVELOPMENT_TEAM = 24V9HW64Y3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Edamame/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application needs permission usage camera for scan food. ";
@@ -1071,7 +1107,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3YPP74CF66;
+				DEVELOPMENT_TEAM = 24V9HW64Y3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Edamame/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application needs permission usage camera for scan food. ";

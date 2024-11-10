@@ -9,14 +9,15 @@ import UIKit
 
 class ScanBuilder {
     static func build(usingNavigationFactory factory: NavigationFactory) -> UIViewController {
-        let router = ScanRouter()
+
         let storyboard = UIStoryboard.init(name: "ScanViewController", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "ScanViewController") as! ScanViewController
         let interactor = ScanViewControllerInteractor()
+        let router = ScanRouter()
         let presenter = ScanViewControllerPresenter(view: view, router: router, interactor: interactor)
         view.title = "Scan Food"
         view.handler = presenter
-        view.setNavigationLeftButton()
+//        view.setNavigationLeftButton()
         
         return factory(view)
     }

@@ -26,7 +26,7 @@ extension TabBarRouter {
     
     static func tabs(with submodules: subModules) -> HomeTabs {
         let homeTabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 1)
-        let scanTabBarItem = UITabBarItem(title: "", image: UIImage(named: "scanIcon"), tag: 2)
+        let scanTabBarItem = UITabBarItem(title: "Scan", image:  UIImage(systemName: "qrcode.viewfinder"), tag: 2)
         let profileTabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 3)
         
         submodules.home.tabBarItem = homeTabBarItem

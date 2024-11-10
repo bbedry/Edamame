@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ScanViewController" id="Y6W-OH-hqX" customClass="ScanViewController" customModule="Edamame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-6G-PkY">
+                                <rect key="frame" x="16" y="107" width="361" height="81.666666666666686"/>
+                                <string key="text">Support your healthy lifestyle by quickly calculating the calories and nutritional values of your food. Simply point your camera at the product packaging or label for fast and accurate results. Track your nutrition effortlessly to stay on top of your wellness goals!</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="AoP-ya-JFV">
+                                <rect key="frame" x="76.666666666666686" y="283.33333333333331" width="240" height="239.99999999999994"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AoP-ya-JFV" secondAttribute="height" multiplier="1:1" id="KbD-IZ-Fuc"/>
+                                    <constraint firstAttribute="height" constant="240" id="ph5-0p-XgY"/>
+                                </constraints>
+                            </imageView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wed-PM-SlM">
+                                <rect key="frame" x="0.0" y="59" width="393" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYw-mU-wKp">
+                                <rect key="frame" x="16" y="730" width="361" height="56"/>
+                                <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="lXd-4O-qjQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <action selector="scanButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gQD-gV-s8a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TYw-mU-wKp" firstAttribute="top" secondItem="Wed-PM-SlM" secondAttribute="bottom" constant="32" id="Bgv-Cv-V8g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EdP-6G-PkY" secondAttribute="trailing" constant="16" id="DJk-PX-Gnt"/>
+                            <constraint firstItem="Wed-PM-SlM" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Dmv-3N-Zjn"/>
+                            <constraint firstItem="AoP-ya-JFV" firstAttribute="centerX" secondItem="EdP-6G-PkY" secondAttribute="centerX" id="EOy-eI-cRN"/>
+                            <constraint firstItem="Wed-PM-SlM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="InA-sS-4E9"/>
+                            <constraint firstItem="TYw-mU-wKp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ole-cN-hYP"/>
+                            <constraint firstItem="AoP-ya-JFV" firstAttribute="centerX" secondItem="TYw-mU-wKp" secondAttribute="centerX" id="P2j-44-IJV"/>
+                            <constraint firstItem="Wed-PM-SlM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Vit-Jj-QFD"/>
+                            <constraint firstItem="EdP-6G-PkY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="aKz-IP-NwZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TYw-mU-wKp" secondAttribute="bottom" constant="32" id="aY9-7o-1fd"/>
+                            <constraint firstItem="AoP-ya-JFV" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="283.33333333333326" id="gBO-Na-1Iz"/>
+                            <constraint firstItem="EdP-6G-PkY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="48" id="lAV-sQ-Mrg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TYw-mU-wKp" secondAttribute="trailing" constant="16" id="sXI-65-oTm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scanButton" destination="TYw-mU-wKp" id="PND-Tc-qu2"/>
+                        <outlet property="scanDescriptionLabel" destination="EdP-6G-PkY" id="tfD-NM-cd3"/>
+                        <outlet property="scanOnboardingImage" destination="AoP-ya-JFV" id="kqc-S6-hZZ"/>
+                        <outlet property="scannedFoodTableView" destination="Wed-PM-SlM" id="yAI-YZ-TwT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="-34.507042253521128"/>
+        </scene>
+    <resources>
+        <image name="scanOnboarding" width="676" height="632"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

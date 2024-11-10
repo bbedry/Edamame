@@ -33,8 +33,15 @@ class ScanViewControllerPresenter: ScanControllerPresenterProtocol {
 }
 
 extension ScanViewControllerPresenter {
-    func showCamera(on view: UIView) {
-        interactor?.startCameraSession(on: view)
+    func showCamera(on view: UIViewController) {
+      DispatchQueue.main.async {
+        if let navigationController = view.navigationController {
+          self.router?.presentCameraView(from: navigationController)
+        } else {
+          view.present(view, animated: true, completion: nil)
+        }
+      }
+      
     }
     
 }

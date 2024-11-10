@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,27 +17,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wed-PM-SlM">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Öğününüzün besin değerlerini öğrenmek için taratın!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-qj-HFu">
+                                <rect key="frame" x="16" y="95" width="361" height="37.333333333333343"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="zG8-eS-2bc">
+                                <rect key="frame" x="16" y="148.33333333333337" width="361" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="ahx-fF-SH6"/>
+                                </constraints>
+                            </imageView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wed-PM-SlM">
+                                <rect key="frame" x="0.0" y="160.33333333333331" width="393" height="537.66666666666674"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEM-Ew-udN">
+                                <rect key="frame" x="16" y="730" width="361" height="56"/>
+                                <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="C8g-EE-xuO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7ge-H3-vkh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Wed-PM-SlM" secondAttribute="bottom" id="4BU-b3-kUF"/>
-                            <constraint firstItem="Wed-PM-SlM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="O7s-u2-rVb"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wed-PM-SlM" secondAttribute="trailing" id="aER-rk-tbR"/>
-                            <constraint firstItem="Wed-PM-SlM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="lBw-bU-l4e"/>
+                            <constraint firstItem="hEM-Ew-udN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="0Of-Fz-YgH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Mcx-qj-HFu" secondAttribute="trailing" constant="16" id="5AQ-2Q-JFS"/>
+                            <constraint firstItem="Mcx-qj-HFu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="PZJ-Ri-wq9"/>
+                            <constraint firstItem="Mcx-qj-HFu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="TSw-Bh-qJZ"/>
+                            <constraint firstItem="zG8-eS-2bc" firstAttribute="top" secondItem="Mcx-qj-HFu" secondAttribute="bottom" constant="16" id="Wnd-oz-7sd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zG8-eS-2bc" secondAttribute="trailing" constant="16" id="Z1p-Lj-ccZ"/>
+                            <constraint firstItem="hEM-Ew-udN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="j8u-OC-Dxg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hEM-Ew-udN" secondAttribute="bottom" constant="32" id="n13-bB-Ggu"/>
+                            <constraint firstItem="zG8-eS-2bc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="nnK-81-dtA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hEM-Ew-udN" secondAttribute="trailing" constant="16" id="sV9-7n-azy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scanButton" destination="hEM-Ew-udN" id="Xo1-T7-GXm"/>
+                        <outlet property="scanDescriptionLabel" destination="Mcx-qj-HFu" id="hTF-yX-F41"/>
+                        <outlet property="scanOnboardingImage" destination="zG8-eS-2bc" id="8wu-K9-Rdz"/>
+                        <outlet property="scannedFoodTableView" destination="Wed-PM-SlM" id="hX2-ap-LP1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="-34"/>
+            <point key="canvasLocation" x="20.610687022900763" y="-34.507042253521128"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="GhP-bk-aZ7">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="ytE-nD-6FS" customClass="CameraViewController" customModule="Edamame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pSe-Wu-kCI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uNv-bo-m4p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFP-9j-fJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="22"/>
         </scene>
     </scenes>
     <resources>
+        <image name="scanOnboarding" width="676" height="632"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
